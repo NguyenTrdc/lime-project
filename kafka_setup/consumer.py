@@ -8,13 +8,13 @@ import time
 
 # Initialize configurations from "python.config" file
 CONF = ccloud_lib.read_ccloud_config("python.config")
-TOPIC = "my_first_topic" 
+TOPIC = "lime_API" 
 
 # Create Consumer instance
 # 'auto.offset.reset=earliest' to start reading from the beginning of the
 # topic if no committed offsets exist
 consumer_conf = ccloud_lib.pop_schema_registry_params_from_config(CONF)
-consumer_conf['group.id'] = 'my_weather_consumer'
+consumer_conf['group.id'] = 'lime_consumer'
 consumer_conf['auto.offset.reset'] = 'earliest' # This means that you will consume latest messages that your script haven't consumed yet!
 consumer = Consumer(consumer_conf)
 
@@ -39,9 +39,11 @@ try:
             record_key = msg.key()
             record_value = msg.value()
             data = json.loads(record_value)
-            weather = data["degrees_in_celsion"]
-            print(f"It's currently {weather} degrees")
-            time.sleep(0.5) # Wait half a second
+            
+            n_bikes = data['num_bikes_available']
+            timestamp = f"{data['day']}/{data['month']}/{data['year']} {data['hour']}:{data['minute']}"
+            print(f"{timestamp} - There was {n_bikes} bikes available at station {data['stationCode']}.")
+            time.sleep(1) # Wait a second
 except KeyboardInterrupt:
     pass
 finally:
