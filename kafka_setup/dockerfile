@@ -1,0 +1,15 @@
+# Dockerfile for building a custom Kafka image
+FROM python:latest
+WORKDIR kafka
+# Upgrade pip
+RUN pip install --upgrade pip
+
+# Intall libraries
+RUN pip install numpy && pip install confluent-kafka && pip install requests && pip install certifi && pip install confluent-kafka[avro,json,protobuf]>=1.4.2
+
+#Copy files
+COPY producer.py ./producer.py
+COPY consumer.py ./consumer.py
+COPY ccloud_lib.py ./ccloud_lib.py
+COPY python.config  ./python.config
+
