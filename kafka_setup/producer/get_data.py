@@ -53,23 +53,3 @@ def get_data():
     except requests.exceptions.RequestException as e:
         print("Error fetching data:", e)
     
-
-# df = get_data()
-    
-
-# for index, row in df.iterrows():
-#     record_key = str(row["stationCode"])
-#     record_value = json.dumps(
-#                 {
-#                     "stationCode": int(row["stationCode"]),
-#                     "num_bikes_available": int(row["num_bikes_available"]),
-#                     "numDocksAvailable": int(row["numDocksAvailable"]),
-#                     "year": int(row["year"]),
-#                     "month": int(row["month"]),
-#                     "day": int(row["day"]),
-#                     "hour": int(row["hour"]),
-#                     "minute": int(row["minute"]),
-#                 }
-#             )
-#     data = json.loads(record_value)
-# print(data)

@@ -23,9 +23,9 @@ ccloud_lib.create_topic(CONF, TOPIC)
 try:
     # Starts an infinite while loop that produces records from the DataFrame
     
-    df = get_data()
-    
     while True:
+        df = get_data()
+        print("\n⌛ Producing... ⌛\n")
         for index, row in df.iterrows():
             record_key = str(row["stationCode"])
             record_value = json.dumps(
@@ -40,7 +40,7 @@ try:
                     "minute": int(row["minute"]),
                 }
             )
-            print("Producing record: {}\t{}".format(record_key, record_value))
+            
 
             # This will actually send data to your topic
             producer.produce(
@@ -49,7 +49,13 @@ try:
                 value=record_value,
             )
             producer.flush()  # Flush to ensure the record is sent immediately
+            print("Producing record *: {}\t{}".format(record_key, record_value),end="",flush=True)
             
+            # Clear the last printed line using '\r'
+            print("\r", end="", flush=True)
+
+            
+        print("\n✅ Producing data done ! ✅\n")
         time.sleep(3600) # Wait an hour before producing new data
 
 

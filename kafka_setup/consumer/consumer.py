@@ -23,6 +23,7 @@ consumer.subscribe([TOPIC])
 
 # Process messages
 try:
+    print("\n⌛ Consuming data... ⌛\n")
     while True:
         msg = consumer.poll(1.0) # Search for all non-consumed events. It times out after 1 second
         if msg is None:
@@ -42,8 +43,11 @@ try:
             
             n_bikes = data['num_bikes_available']
             timestamp = f"{data['day']}/{data['month']}/{data['year']} {data['hour']}:{data['minute']}"
-            print(f"{timestamp} - There was {n_bikes} bikes available at station {data['stationCode']}.")
+            print(f"{timestamp} - There was {n_bikes} bikes available at station {data['stationCode']}.",end="",flush=True)
             time.sleep(1) # Wait a second
+            # Clear the last printed line using '\r'
+            print("\r", end="", flush=True)
+            
 except KeyboardInterrupt:
     pass
 finally:

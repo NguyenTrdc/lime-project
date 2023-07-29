@@ -1,21 +1,15 @@
 # Dockerfile for building a custom Kafka image
 FROM python:latest
-WORKDIR kafka
+WORKDIR consumer
 # Upgrade pip
 RUN pip install --upgrade pip
 
 # Intall libraries
-RUN pip install pandas && pip install numpy && pip install pytz
 RUN pip install confluent-kafka && pip install requests && pip install certifi && pip install confluent-kafka[avro,json,protobuf]>=1.4.2
 
 #Copy files
-COPY producer.py ./producer.py
 COPY consumer.py ./consumer.py
 COPY ccloud_lib.py ./ccloud_lib.py
 COPY python.config  ./python.config
-COPY get_data.py ./get_data.py
-COPY start.sh ./start.sh
 
-RUN chmod 755 start.sh
-
-CMD ["./start.sh"]
+CMD ["python3","consumer.py"]
