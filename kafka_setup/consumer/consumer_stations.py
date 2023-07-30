@@ -8,7 +8,7 @@ import time
 
 # Initialize configurations from "python.config" file
 CONF = ccloud_lib.read_ccloud_config("python.config")
-TOPIC = "lime_API" 
+TOPIC = "real_time_lime_API" 
 
 # Create Consumer instance
 # 'auto.offset.reset=earliest' to start reading from the beginning of the
@@ -31,7 +31,9 @@ try:
             # Initial message consumption may take up to
             # `session.timeout.ms` for the consumer group to
             # rebalance and start consuming
-            print("Waiting for message or event/error in poll()")
+            print("Waiting for message or event/error in poll()",end="",flush=True)
+            # Clear the last printed line using '\r'
+            print("\r", end="", flush=True)
             continue
         elif msg.error():
             print('error: {}'.format(msg.error()))
