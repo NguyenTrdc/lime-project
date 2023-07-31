@@ -40,7 +40,11 @@ def get_data_velib_metropole():
         df["month"] = current_date_time.month
         df["day"] = current_date_time.day
         df["hour"] = current_date_time.hour
-        df["minute"] = current_date_time.minute
+        minute = current_date_time.minute
+        if minute < 30:
+            df["minute"] = 0
+        else:
+            df["minute"] = 30
         
         #Dropping every station that is not installed.
         df = df[df['is_installed'] != 0]
@@ -153,7 +157,11 @@ def get_Paris_weather():
             current_weather_df["month"] = current_date_time.month
             current_weather_df["day"] = current_date_time.day
             current_weather_df["hour"] = current_date_time.hour
-            current_weather_df["minute"] = current_date_time.minute
+            minute = current_date_time.minute
+            if minute < 30:
+                current_weather_df["minute"] = 0
+            else:
+                current_weather_df["minute"] = 30
             
             # Normalize the nested dictionaries and merge them into the DataFrame
             current_weather_df = pd.concat([current_weather_df, pd.json_normalize(current_weather_df['current_weather']), pd.json_normalize(current_weather_df['hourly'])], axis=1)

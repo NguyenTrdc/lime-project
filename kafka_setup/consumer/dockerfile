@@ -8,8 +8,14 @@ RUN pip install --upgrade pip
 RUN pip install confluent-kafka && pip install requests && pip install certifi && pip install confluent-kafka[avro,json,protobuf]>=1.4.2
 
 #Copy files
-COPY consumer.py ./consumer.py
+COPY consumer_stations.py ./consumer_stations.py
+COPY consumer_weather.py ./consumer_weather.py
 COPY ccloud_lib.py ./ccloud_lib.py
 COPY python.config  ./python.config
+COPY start.sh  ./start.sh
 
-CMD ["python3","consumer.py"]
+# Make start.sh executable in the container
+RUN chmod +x start.sh
+
+# Run the start.sh script when the container starts
+CMD ["./start.sh"]

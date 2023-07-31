@@ -100,7 +100,7 @@ try:
             
         print("Producing record station: {}\t{}".format(record_key, record_value_station),end="",flush=True)
         print("\n✅ Producing data done ! ✅\n")
-        time.sleep(3600) # Wait an hour before producing new data
+        time.sleep(60) # Wait an hour before producing new data
 
 
 # Interrupt infinite loop when hitting CTRL+C

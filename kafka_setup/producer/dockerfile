@@ -1,6 +1,6 @@
 # Dockerfile for building a custom Kafka image
 FROM python:latest
-EXPOSE 8080
+
 WORKDIR producer
 # Upgrade pip
 RUN pip install --upgrade pip
