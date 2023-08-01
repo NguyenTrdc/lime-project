@@ -10,8 +10,8 @@ from get_data import get_data, get_Paris_weather
 
 # Initialize configurations from "python.config" file
 CONF = ccloud_lib.read_ccloud_config("python.config")
-TOPIC_stations = "real_time_lime_API"
-TOPIC_weather = "real_time_weather"
+TOPIC_stations = "lime_stations_topic"
+TOPIC_weather = "weather_topic"
 
 # Create Producer instance
 producer_conf = ccloud_lib.pop_schema_registry_params_from_config(CONF)
@@ -38,11 +38,12 @@ try:
         for index, row in ressult_weather.iterrows():
             record_value_weather = json.dumps(
                 {
-                    "year": int(row["year"]),
-                    "month": int(row["month"]),
-                    "day": int(row["day"]),
-                    "hour": int(row["hour"]),
-                    "minute": int(row["minute"]),
+                    # "year": int(row["year"]),
+                    # "month": int(row["month"]),
+                    # "day": int(row["day"]),
+                    # "hour": int(row["hour"]),
+                    # "minute": int(row["minute"]),
+                    "datetime" : str(row["datetime"]),
                     "temperature": float(row["temperature"]),
                     "windspeed": float(row["windspeed"]),
                     "is_day": int(row["is_day"]),
@@ -72,14 +73,15 @@ try:
 
             record_value_station = json.dumps(
                 {
+                    "datetime" : str(row["datetime"]),
                     "stationCode": int(row["stationCode"]),
                     "num_bikes_available": int(row["num_bikes_available"]),
                     "numDocksAvailable": int(row["numDocksAvailable"]),
-                    "year": int(row["year"]),
-                    "month": int(row["month"]),
-                    "day": int(row["day"]),
-                    "hour": int(row["hour"]),
-                    "minute": int(row["minute"]),
+                    # "year": int(row["year"]),
+                    # "month": int(row["month"]),
+                    # "day": int(row["day"]),
+                    # "hour": int(row["hour"]),
+                    # "minute": int(row["minute"]),
                     "name": str(row["name"]),
                     "lat": float(row["lat"]),
                     "lon": float(row["lon"])
@@ -100,7 +102,7 @@ try:
             
         print("Producing record station: {}\t{}".format(record_key, record_value_station),end="",flush=True)
         print("\n✅ Producing data done ! ✅\n")
-        time.sleep(60) # Wait an hour before producing new data
+        time.sleep(1800) # Wait an half an hour before producing new data
 
 
 # Interrupt infinite loop when hitting CTRL+C

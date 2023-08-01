@@ -1,0 +1,30 @@
+[2023-08-01 09:54:33,461] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: s3_to_BigQuery.stations_data_to_BQ manual__2023-08-01T09:54:28.608301+00:00 [queued]>
+[2023-08-01 09:54:33,472] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: s3_to_BigQuery.stations_data_to_BQ manual__2023-08-01T09:54:28.608301+00:00 [queued]>
+[2023-08-01 09:54:33,472] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-01 09:54:33,472] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2023-08-01 09:54:33,473] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-01 09:54:33,959] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): stations_data_to_BQ> on 2023-08-01 09:54:28.608301+00:00
+[2023-08-01 09:54:33,964] {standard_task_runner.py:52} INFO - Started process 232 to run task
+[2023-08-01 09:54:33,966] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 's3_to_BigQuery', 'stations_data_to_BQ', 'manual__2023-08-01T09:54:28.608301+00:00', '--job-id', '151', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpfh4qozq_', '--error-file', '/tmp/tmpqls29kxg']
+[2023-08-01 09:54:33,967] {standard_task_runner.py:80} INFO - Job 151: Subtask stations_data_to_BQ
+[2023-08-01 09:54:34,244] {task_command.py:370} INFO - Running <TaskInstance: s3_to_BigQuery.stations_data_to_BQ manual__2023-08-01T09:54:28.608301+00:00 [running]> on host 3548e63a091e
+[2023-08-01 09:54:34,329] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=s3_to_BigQuery
+AIRFLOW_CTX_TASK_ID=stations_data_to_BQ
+AIRFLOW_CTX_EXECUTION_DATE=2023-08-01T09:54:28.608301+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-08-01T09:54:28.608301+00:00
+[2023-08-01 09:54:38,109] {_metadata.py:104} WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+[2023-08-01 09:54:38,181] {_metadata.py:104} WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: [Errno 113] No route to host
+[2023-08-01 09:54:41,182] {_metadata.py:104} WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+[2023-08-01 09:54:41,183] {_default.py:284} WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+[2023-08-01 09:54:41,186] {logging_mixin.py:115} INFO - Please visit this URL to authorize this application: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=725825577420-unm2gnkiprugilg743tkbig250f4sfsj.apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fbigquery&state=nZPAHtMlGQ2vkEGJ7oPKDR8ldGX91m&prompt=consent&access_type=offline
+[2023-08-01 09:54:41,186] {logging_mixin.py:115} INFO - Enter the authorization code: 
+[2023-08-01 09:54:41,187] {logging_mixin.py:115} INFO - Error: EOF when reading a line
+[2023-08-01 09:54:41,187] {python.py:173} INFO - Done. Returned value was: None
+[2023-08-01 09:54:42,181] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=s3_to_BigQuery, task_id=stations_data_to_BQ, execution_date=20230801T095428, start_date=20230801T095433, end_date=20230801T095442
+[2023-08-01 09:54:42,505] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-08-01 09:54:43,010] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

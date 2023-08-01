@@ -1,0 +1,65 @@
+[2023-07-31 12:28:26,318] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: s3_redshift_dag.upload_to_s3 manual__2023-07-31T12:28:22.963804+00:00 [queued]>
+[2023-07-31 12:28:26,325] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: s3_redshift_dag.upload_to_s3 manual__2023-07-31T12:28:22.963804+00:00 [queued]>
+[2023-07-31 12:28:26,325] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-07-31 12:28:26,325] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-07-31 12:28:26,325] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-07-31 12:28:26,349] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): upload_to_s3> on 2023-07-31 12:28:22.963804+00:00
+[2023-07-31 12:28:26,363] {standard_task_runner.py:52} INFO - Started process 1111 to run task
+[2023-07-31 12:28:26,370] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 's3_redshift_dag', 'upload_to_s3', 'manual__2023-07-31T12:28:22.963804+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpf92tcuff', '--error-file', '/tmp/tmp_p9i6hyf']
+[2023-07-31 12:28:26,372] {standard_task_runner.py:80} INFO - Job 14: Subtask upload_to_s3
+[2023-07-31 12:28:26,433] {task_command.py:370} INFO - Running <TaskInstance: s3_redshift_dag.upload_to_s3 manual__2023-07-31T12:28:22.963804+00:00 [running]> on host 8aac46936356
+[2023-07-31 12:28:26,528] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=s3_redshift_dag
+AIRFLOW_CTX_TASK_ID=upload_to_s3
+AIRFLOW_CTX_EXECUTION_DATE=2023-07-31T12:28:22.963804+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-07-31T12:28:22.963804+00:00
+[2023-07-31 12:28:26,544] {base.py:68} INFO - Using connection ID 'aws_default' for task execution.
+[2023-07-31 12:28:26,544] {base_aws.py:206} INFO - Credentials retrieved from login
+[2023-07-31 12:28:27,169] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/boto3/s3/transfer.py", line 288, in upload_file
+    future.result()
+  File "/home/airflow/.local/lib/python3.7/site-packages/s3transfer/futures.py", line 103, in result
+    return self._coordinator.result()
+  File "/home/airflow/.local/lib/python3.7/site-packages/s3transfer/futures.py", line 266, in result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/s3transfer/tasks.py", line 139, in __call__
+    return self._execute_main(kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/s3transfer/tasks.py", line 162, in _execute_main
+    return_value = self._main(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/s3transfer/upload.py", line 758, in _main
+    client.put_object(Bucket=bucket, Key=key, Body=body, **extra_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/client.py", line 508, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/client.py", line 911, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (SignatureDoesNotMatch) when calling the PutObject operation: The request signature we calculated does not match the signature you provided. Check your key and signing method.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 32, in _upload_to_s3
+    replace=True
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 63, in wrapper
+    return func(*bound_args.args, **bound_args.kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 91, in wrapper
+    return func(*bound_args.args, **bound_args.kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 615, in load_file
+    client.upload_file(filename, bucket_name, key, ExtraArgs=extra_args, Config=self.transfer_config)
+  File "/home/airflow/.local/lib/python3.7/site-packages/boto3/s3/inject.py", line 148, in upload_file
+    callback=Callback,
+  File "/home/airflow/.local/lib/python3.7/site-packages/boto3/s3/transfer.py", line 296, in upload_file
+    filename, '/'.join([bucket, key]), e
+boto3.exceptions.S3UploadFailedError: Failed to upload /tmp/my_csv_file.csv to bucket-jedha-exo/my_csv_file.csv: An error occurred (SignatureDoesNotMatch) when calling the PutObject operation: The request signature we calculated does not match the signature you provided. Check your key and signing method.
+[2023-07-31 12:28:27,179] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=s3_redshift_dag, task_id=upload_to_s3, execution_date=20230731T122822, start_date=20230731T122826, end_date=20230731T122827
+[2023-07-31 12:28:27,667] {standard_task_runner.py:97} ERROR - Failed to execute job 14 for task upload_to_s3 (Failed to upload /tmp/my_csv_file.csv to bucket-jedha-exo/my_csv_file.csv: An error occurred (SignatureDoesNotMatch) when calling the PutObject operation: The request signature we calculated does not match the signature you provided. Check your key and signing method.; 1111)
+[2023-07-31 12:28:27,705] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-07-31 12:28:27,754] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

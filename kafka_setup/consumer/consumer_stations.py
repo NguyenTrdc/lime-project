@@ -8,7 +8,7 @@ import time
 
 # Initialize configurations from "python.config" file
 CONF = ccloud_lib.read_ccloud_config("python.config")
-TOPIC = "real_time_lime_API" 
+TOPIC = "test_real_time_lime_API" 
 
 # Create Consumer instance
 # 'auto.offset.reset=earliest' to start reading from the beginning of the
@@ -44,8 +44,8 @@ try:
             data = json.loads(record_value)
             
             n_bikes = data['num_bikes_available']
-            timestamp = f"{data['day']}/{data['month']}/{data['year']} {data['hour']}:{data['minute']}"
-            print(f"{timestamp} - There was {n_bikes} bikes available at station {data['stationCode']}.",end="",flush=True)
+            #timestamp = f"{data['day']}/{data['month']}/{data['year']} {data['hour']}:{data['minute']}"
+            print(f"{data['datetime']} - There was {n_bikes} bikes available at station {data['stationCode']}.",end="",flush=True)
             time.sleep(1) # Wait a second
             # Clear the last printed line using '\r'
             print("\r", end="", flush=True)

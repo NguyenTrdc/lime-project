@@ -34,23 +34,24 @@ def get_data_velib_metropole():
 
         # Get the current date and time
         current_date_time = get_current_date_time()
+        df["datetime"] = current_date_time
 
-        #Convert into year, month, day, hour and minute 
-        df["year"] = current_date_time.year
-        df["month"] = current_date_time.month
-        df["day"] = current_date_time.day
-        df["hour"] = current_date_time.hour
-        minute = current_date_time.minute
-        if minute < 30:
-            df["minute"] = 0
-        else:
-            df["minute"] = 30
+        # #Convert into year, month, day, hour and minute 
+        # df["year"] = current_date_time.year
+        # df["month"] = current_date_time.month
+        # df["day"] = current_date_time.day
+        # df["hour"] = current_date_time.hour
+        # minute = current_date_time.minute
+        # if minute < 30:
+        #     df["minute"] = 0
+        # else:
+        #     df["minute"] = 30
         
         #Dropping every station that is not installed.
         df = df[df['is_installed'] != 0]
         
         #Get the interesting columns.
-        df = df[["stationCode","num_bikes_available","numDocksAvailable","year","month","day","hour","minute"]]
+        df = df[["stationCode","num_bikes_available","numDocksAvailable","datetime"]]
         
         
         return df
@@ -151,17 +152,19 @@ def get_Paris_weather():
             
             # Get the current date and time
             current_date_time = get_current_date_time()
+            
+            current_weather_df["datetime"] = current_date_time
 
             #Convert into year, month, day, hour and minute 
-            current_weather_df["year"] = current_date_time.year
-            current_weather_df["month"] = current_date_time.month
-            current_weather_df["day"] = current_date_time.day
-            current_weather_df["hour"] = current_date_time.hour
-            minute = current_date_time.minute
-            if minute < 30:
-                current_weather_df["minute"] = 0
-            else:
-                current_weather_df["minute"] = 30
+            # current_weather_df["year"] = current_date_time.year
+            # current_weather_df["month"] = current_date_time.month
+            # current_weather_df["day"] = current_date_time.day
+            # current_weather_df["hour"] = current_date_time.hour
+            # minute = current_date_time.minute
+            # if minute < 30:
+            #     current_weather_df["minute"] = 0
+            # else:
+            #     current_weather_df["minute"] = 30
             
             # Normalize the nested dictionaries and merge them into the DataFrame
             current_weather_df = pd.concat([current_weather_df, pd.json_normalize(current_weather_df['current_weather']), pd.json_normalize(current_weather_df['hourly'])], axis=1)

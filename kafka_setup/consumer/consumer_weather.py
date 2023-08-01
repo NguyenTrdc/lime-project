@@ -8,7 +8,7 @@ import time
 
 # Initialize configurations from "python.config" file
 CONF = ccloud_lib.read_ccloud_config("python.config")
-TOPIC = "real_time_weather"
+TOPIC = "weather_topic"
 
 # Create Consumer instance
 # 'auto.offset.reset=earliest' to start reading from the beginning of the
@@ -42,8 +42,8 @@ try:
             record_key = msg.key()
             record_value = msg.value()
             data = json.loads(record_value)
-            timestamp = f"{data['day']}/{data['month']}/{data['year']} {data['hour']}:{data['minute']}"
-            print(f"\n{timestamp} - Paris temperature : {data['temperature']}.\n")
+            #timestamp = f"{data['day']}/{data['month']}/{data['year']} {data['hour']}:{data['minute']}"
+            print(f"\n{data['datetime']} - Paris temperature : {data['temperature']}.\n")
             time.sleep(1) # Wait a second
             
 except KeyboardInterrupt:

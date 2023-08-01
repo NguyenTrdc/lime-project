@@ -1,0 +1,37 @@
+[2023-08-01 11:10:27,194] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: s3_to_BigQuery.stations_data_to_BQ manual__2023-08-01T11:10:24.742385+00:00 [queued]>
+[2023-08-01 11:10:27,201] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: s3_to_BigQuery.stations_data_to_BQ manual__2023-08-01T11:10:24.742385+00:00 [queued]>
+[2023-08-01 11:10:27,201] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-01 11:10:27,201] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2023-08-01 11:10:27,201] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-01 11:10:27,228] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): stations_data_to_BQ> on 2023-08-01 11:10:24.742385+00:00
+[2023-08-01 11:10:27,242] {standard_task_runner.py:52} INFO - Started process 3292 to run task
+[2023-08-01 11:10:27,252] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 's3_to_BigQuery', 'stations_data_to_BQ', 'manual__2023-08-01T11:10:24.742385+00:00', '--job-id', '174', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpo4achyb7', '--error-file', '/tmp/tmprbel43bp']
+[2023-08-01 11:10:27,256] {standard_task_runner.py:80} INFO - Job 174: Subtask stations_data_to_BQ
+[2023-08-01 11:10:27,346] {task_command.py:370} INFO - Running <TaskInstance: s3_to_BigQuery.stations_data_to_BQ manual__2023-08-01T11:10:24.742385+00:00 [running]> on host a6bbb8f7ba0b
+[2023-08-01 11:10:27,596] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=s3_to_BigQuery
+AIRFLOW_CTX_TASK_ID=stations_data_to_BQ
+AIRFLOW_CTX_EXECUTION_DATE=2023-08-01T11:10:24.742385+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-08-01T11:10:24.742385+00:00
+[2023-08-01 11:10:27,597] {logging_mixin.py:115} INFO - 
+ heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeyy
+[2023-08-01 11:10:28,072] {logging_mixin.py:115} INFO - 
+ working?
+[2023-08-01 11:11:23,572] {logging_mixin.py:115} INFO - 
+ DataFrame created !?
+[2023-08-01 11:11:23,572] {logging_mixin.py:115} INFO - real_time_lime_API.2023-07-31
+[2023-08-01 11:11:26,665] {_metadata.py:104} WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+[2023-08-01 11:11:26,725] {_metadata.py:104} WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: [Errno 113] No route to host
+[2023-08-01 11:11:29,729] {_metadata.py:104} WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+[2023-08-01 11:11:29,730] {_default.py:284} WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+[2023-08-01 11:11:29,732] {logging_mixin.py:115} INFO - Please visit this URL to authorize this application: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=725825577420-unm2gnkiprugilg743tkbig250f4sfsj.apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fbigquery&state=ZLYTrlVbagGflmBfEADibcZ5GjKoUe&prompt=consent&access_type=offline
+[2023-08-01 11:11:29,732] {logging_mixin.py:115} INFO - Enter the authorization code: 
+[2023-08-01 11:11:29,732] {logging_mixin.py:115} INFO - Error: EOF when reading a line
+[2023-08-01 11:11:29,732] {python.py:173} INFO - Done. Returned value was: None
+[2023-08-01 11:11:30,032] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=s3_to_BigQuery, task_id=stations_data_to_BQ, execution_date=20230801T111024, start_date=20230801T111027, end_date=20230801T111130
+[2023-08-01 11:11:30,108] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-08-01 11:11:30,993] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,441 @@
+[2023-07-31 13:15:04,457] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: s3_redshift_dag.load_from_s3 manual__2023-07-31T13:15:02.457484+00:00 [queued]>
+[2023-07-31 13:15:04,464] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: s3_redshift_dag.load_from_s3 manual__2023-07-31T13:15:02.457484+00:00 [queued]>
+[2023-07-31 13:15:04,464] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-07-31 13:15:04,464] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-07-31 13:15:04,464] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-07-31 13:15:04,546] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): load_from_s3> on 2023-07-31 13:15:02.457484+00:00
+[2023-07-31 13:15:04,552] {standard_task_runner.py:52} INFO - Started process 3465 to run task
+[2023-07-31 13:15:04,556] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 's3_redshift_dag', 'load_from_s3', 'manual__2023-07-31T13:15:02.457484+00:00', '--job-id', '127', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp6_643cu_', '--error-file', '/tmp/tmp6tldh2yj']
+[2023-07-31 13:15:04,557] {standard_task_runner.py:80} INFO - Job 127: Subtask load_from_s3
+[2023-07-31 13:15:04,634] {task_command.py:370} INFO - Running <TaskInstance: s3_redshift_dag.load_from_s3 manual__2023-07-31T13:15:02.457484+00:00 [running]> on host 8aac46936356
+[2023-07-31 13:15:04,739] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=s3_redshift_dag
+AIRFLOW_CTX_TASK_ID=load_from_s3
+AIRFLOW_CTX_EXECUTION_DATE=2023-07-31T13:15:02.457484+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-07-31T13:15:02.457484+00:00
+[2023-07-31 13:15:05,170] {logging_mixin.py:115} INFO - {"stationCode":16107,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":31,"day":30,"minute":52}
+{"stationCode":31104,"month":7,"hour":16,"num_bikes_available":22,"year":2023,"numDocksAvailable":6,"day":30,"minute":52}
+{"stationCode":9020,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":19,"day":30,"minute":52}
+{"stationCode":12109,"month":7,"hour":16,"num_bikes_available":6,"year":2023,"numDocksAvailable":21,"day":30,"minute":52}
+{"stationCode":14111,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":23,"day":30,"minute":52}
+{"stationCode":14014,"month":7,"hour":16,"num_bikes_available":25,"year":2023,"numDocksAvailable":34,"day":30,"minute":52}
+{"stationCode":32017,"month":7,"hour":16,"num_bikes_available":11,"year":2023,"numDocksAvailable":8,"day":30,"minute":52}
+{"stationCode":11104,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":19,"day":30,"minute":52}
+{"stationCode":8026,"month":7,"hour":16,"num_bikes_available":6,"year":2023,"numDocksAvailable":6,"day":30,"minute":52}
+{"stationCode":13007,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":45,"day":30,"minute":52}
+{"stationCode":6003,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":14,"day":30,"minute":52}
+{"stationCode":5110,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":19,"day":30,"minute":52}
+{"stationCode":6108,"month":7,"hour":16,"num_bikes_available":10,"year":2023,"numDocksAvailable":7,"day":30,"minute":52}
+{"stationCode":33006,"month":7,"hour":16,"num_bikes_available":15,"year":2023,"numDocksAvailable":14,"day":30,"minute":52}
+{"stationCode":42016,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":21,"day":30,"minute":52}
+{"stationCode":41301,"month":7,"hour":16,"num_bikes_available":38,"year":2023,"numDocksAvailable":11,"day":30,"minute":52}
+{"stationCode":6021,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":18,"day":30,"minute":52}
+{"stationCode":21010,"month":7,"hour":16,"num_bikes_available":6,"year":2023,"numDocksAvailable":19,"day":30,"minute":52}
+{"stationCode":25006,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":20,"day":30,"minute":52}
+{"stationCode":17038,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":57,"day":30,"minute":52}
+{"stationCode":15202,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":27,"day":30,"minute":52}
+{"stationCode":7003,"month":7,"hour":16,"num_bikes_available":39,"year":2023,"numDocksAvailable":21,"day":30,"minute":52}
+{"stationCode":7002,"month":7,"hour":16,"num_bikes_available":23,"year":2023,"numDocksAvailable":9,"day":30,"minute":52}
+{"stationCode":17041,"month":7,"hour":16,"num_bikes_available":8,"year":2023,"numDocksAvailable":26,"day":30,"minute":52}
+{"stationCode":17026,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":38,"day":30,"minute":52}
+{"stationCode":5016,"month":7,"hour":16,"num_bikes_available":6,"year":2023,"numDocksAvailable":11,"day":30,"minute":52}
+{"stationCode":11025,"month":7,"hour":16,"num_bikes_available":13,"year":2023,"numDocksAvailable":27,"day":30,"minute":52}
+{"stationCode":15047,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":51,"day":30,"minute":52}
+{"stationCode":8050,"month":7,"hour":16,"num_bikes_available":6,"year":2023,"numDocksAvailable":25,"day":30,"minute":52}
+{"stationCode":13101,"month":7,"hour":16,"num_bikes_available":12,"year":2023,"numDocksAvailable":22,"day":30,"minute":52}
+{"stationCode":14108,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":14,"day":30,"minute":52}
+{"stationCode":31024,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":35,"day":30,"minute":52}
+{"stationCode":15026,"month":7,"hour":16,"num_bikes_available":25,"year":2023,"numDocksAvailable":7,"day":30,"minute":52}
+{"stationCode":47007,"month":7,"hour":16,"num_bikes_available":18,"year":2023,"numDocksAvailable":2,"day":30,"minute":52}
+{"stationCode":10013,"month":7,"hour":16,"num_bikes_available":6,"year":2023,"numDocksAvailable":52,"day":30,"minute":52}
+{"stationCode":17044,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":35,"day":30,"minute":52}
+{"stationCode":19033,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":40,"day":30,"minute":52}
+{"stationCode":17025,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":32,"day":30,"minute":52}
+{"stationCode":21326,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":13,"day":30,"minute":52}
+{"stationCode":20143,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":40,"day":30,"minute":52}
+{"stationCode":43002,"month":7,"hour":16,"num_bikes_available":14,"year":2023,"numDocksAvailable":12,"day":30,"minute":52}
+{"stationCode":16138,"month":7,"hour":16,"num_bikes_available":11,"year":2023,"numDocksAvailable":18,"day":30,"minute":52}
+{"stationCode":21216,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":24,"day":30,"minute":52}
+{"stationCode":15068,"month":7,"hour":16,"num_bikes_available":10,"year":2023,"numDocksAvailable":6,"day":30,"minute":52}
+{"stationCode":22207,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":18,"day":30,"minute":52}
+{"stationCode":7004,"month":7,"hour":16,"num_bikes_available":10,"year":2023,"numDocksAvailable":8,"day":30,"minute":52}
+{"stationCode":92002,"month":7,"hour":16,"num_bikes_available":14,"year":2023,"numDocksAvailable":9,"day":30,"minute":52}
+{"stationCode":13030,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":18,"day":30,"minute":52}
+{"stationCode":6029,"month":7,"hour":16,"num_bikes_available":9,"year":2023,"numDocksAvailable":17,"day":30,"minute":52}
+{"stationCode":19027,"month":7,"hour":16,"num_bikes_available":0,"year":2023,"numDocksAvailable":18,"day":30,"minute":52}
+{"stationCode":31028,"month":7,"hour":16,"num_bikes_available":6,"year":2023,"numDocksAvailable":22,"day":30,"minute":52}
+{"stationCode":17048,"month":7,"hour":16,"num_bikes_available":6,"year":2023,"numDocksAvailable":24,"day":30,"minute":52}
+{"stationCode":44017,"month":7,"hour":16,"num_bikes_available":17,"year":2023,"numDocksAvailable":11,"day":30,"minute":52}
+{"stationCode":16118,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":24,"day":30,"minute":52}
+{"stationCode":2017,"month":7,"hour":16,"num_bikes_available":6,"year":2023,"numDocksAvailable":34,"day":30,"minute":52}
+{"stationCode":9008,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":16,"day":30,"minute":52}
+{"stationCode":8103,"month":7,"hour":16,"num_bikes_available":11,"year":2023,"numDocksAvailable":12,"day":30,"minute":52}
+{"stationCode":8048,"month":7,"hour":16,"num_bikes_available":5,"year":2023,"numDocksAvailable":16,"day":30,"minute":52}
+{"stationCode":14013,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":9,"day":30,"minute":52}
+{"stationCode":13118,"month":7,"hour":16,"num_bikes_available":59,"year":2023,"numDocksAvailable":3,"day":30,"minute":52}
+{"stationCode":18111,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":22,"day":30,"minute":52}
+{"stationCode":9002,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":10,"day":30,"minute":52}
+{"stationCode":48003,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":19,"day":30,"minute":52}
+{"stationCode":16110,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":20,"day":30,"minute":52}
+{"stationCode":18134,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":21,"day":30,"minute":52}
+{"stationCode":14002,"month":7,"hour":16,"num_bikes_available":20,"year":2023,"numDocksAvailable":26,"day":30,"minute":52}
+{"stationCode":9014,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":31,"day":30,"minute":52}
+{"stationCode":43009,"month":7,"hour":16,"num_bikes_available":5,"year":2023,"numDocksAvailable":43,"day":30,"minute":52}
+{"stationCode":8053,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":27,"day":30,"minute":52}
+{"stationCode":9001,"month":7,"hour":16,"num_bikes_available":0,"year":2023,"numDocksAvailable":17,"day":30,"minute":52}
+{"stationCode":17032,"month":7,"hour":16,"num_bikes_available":5,"year":2023,"numDocksAvailable":16,"day":30,"minute":52}
+{"stationCode":8016,"month":7,"hour":16,"num_bikes_available":21,"year":2023,"numDocksAvailable":5,"day":30,"minute":52}
+{"stationCode":10162,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":20,"day":30,"minute":52}
+{"stationCode":10115,"month":7,"hour":16,"num_bikes_available":0,"year":2023,"numDocksAvailable":24,"day":30,"minute":52}
+{"stationCode":10029,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":19,"day":30,"minute":52}
+{"stationCode":5005,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":20,"day":30,"minute":52}
+{"stationCode":10161,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":28,"day":30,"minute":52}
+{"stationCode":41303,"month":7,"hour":16,"num_bikes_available":21,"year":2023,"numDocksAvailable":11,"day":30,"minute":52}
+{"stationCode":12031,"month":7,"hour":16,"num_bikes_available":34,"year":2023,"numDocksAvailable":0,"day":30,"minute":52}
+{"stationCode":7011,"month":7,"hour":16,"num_bikes_available":8,"year":2023,"numDocksAvailable":14,"day":30,"minute":52}
+{"stationCode":7018,"month":7,"hour":16,"num_bikes_available":15,"year":2023,"numDocksAvailable":4,"day":30,"minute":52}
+{"stationCode":5022,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":19,"day":30,"minute":52}
+{"stationCode":9106,"month":7,"hour":16,"num_bikes_available":10,"year":2023,"numDocksAvailable":2,"day":30,"minute":52}
+{"stationCode":21328,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":25,"day":30,"minute":52}
+{"stationCode":21323,"month":7,"hour":16,"num_bikes_available":29,"year":2023,"numDocksAvailable":2,"day":30,"minute":52}
+{"stationCode":11046,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":15,"day":30,"minute":52}
+{"stationCode":8201,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":23,"day":30,"minute":52}
+{"stationCode":17040,"month":7,"hour":16,"num_bikes_available":13,"year":2023,"numDocksAvailable":35,"day":30,"minute":52}
+{"stationCode":9038,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":25,"day":30,"minute":52}
+{"stationCode":8009,"month":7,"hour":16,"num_bikes_available":12,"year":2023,"numDocksAvailable":14,"day":30,"minute":52}
+{"stationCode":1001,"month":7,"hour":16,"num_bikes_available":14,"year":2023,"numDocksAvailable":3,"day":30,"minute":52}
+{"stationCode":19105,"month":7,"hour":16,"num_bikes_available":0,"year":2023,"numDocksAvailable":17,"day":30,"minute":52}
+{"stationCode":31103,"month":7,"hour":16,"num_bikes_available":32,"year":2023,"numDocksAvailable":4,"day":30,"minute":52}
+{"stationCode":17008,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":18,"day":30,"minute":52}
+{"stationCode":15112,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":22,"day":30,"minute":52}
+{"stationCode":7025,"month":7,"hour":16,"num_bikes_available":32,"year":2023,"numDocksAvailable":0,"day":30,"minute":52}
+{"stationCode":6001,"month":7,"hour":16,"num_bikes_available":9,"year":2023,"numDocksAvailable":7,"day":30,"minute":52}
+{"stationCode":31706,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":23,"day":30,"minute":52}
+{"stationCode":22409,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":12,"day":30,"minute":52}
+{"stationCode":5020,"month":7,"hour":16,"num_bikes_available":32,"year":2023,"numDocksAvailable":7,"day":30,"minute":52}
+{"stationCode":19015,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":22,"day":30,"minute":52}
+{"stationCode":9022,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":30,"day":30,"minute":52}
+{"stationCode":26003,"month":7,"hour":16,"num_bikes_available":10,"year":2023,"numDocksAvailable":6,"day":30,"minute":52}
+{"stationCode":17004,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":37,"day":30,"minute":52}
+{"stationCode":19003,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":20,"day":30,"minute":52}
+{"stationCode":8036,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":30,"day":30,"minute":52}
+{"stationCode":12151,"month":7,"hour":16,"num_bikes_available":30,"year":2023,"numDocksAvailable":29,"day":30,"minute":52}
+{"stationCode":18107,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":33,"day":30,"minute":52}
+{"stationCode":92007,"month":7,"hour":16,"num_bikes_available":12,"year":2023,"numDocksAvailable":10,"day":30,"minute":52}
+{"stationCode":16026,"month":7,"hour":16,"num_bikes_available":8,"year":2023,"numDocksAvailable":13,"day":30,"minute":52}
+{"stationCode":9028,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":14,"day":30,"minute":52}
+{"stationCode":10107,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":46,"day":30,"minute":52}
+{"stationCode":26002,"month":7,"hour":16,"num_bikes_available":17,"year":2023,"numDocksAvailable":23,"day":30,"minute":52}
+{"stationCode":17043,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":35,"day":30,"minute":52}
+{"stationCode":19026,"month":7,"hour":16,"num_bikes_available":0,"year":2023,"numDocksAvailable":17,"day":30,"minute":52}
+{"stationCode":16039,"month":7,"hour":16,"num_bikes_available":5,"year":2023,"numDocksAvailable":43,"day":30,"minute":52}
+{"stationCode":11023,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":43,"day":30,"minute":52}
+{"stationCode":45003,"month":7,"hour":16,"num_bikes_available":14,"year":2023,"numDocksAvailable":21,"day":30,"minute":52}
+{"stationCode":11002,"month":7,"hour":16,"num_bikes_available":11,"year":2023,"numDocksAvailable":12,"day":30,"minute":52}
+{"stationCode":17030,"month":7,"hour":16,"num_bikes_available":5,"year":2023,"numDocksAvailable":18,"day":30,"minute":52}
+{"stationCode":12111,"month":7,"hour":16,"num_bikes_available":5,"year":2023,"numDocksAvailable":22,"day":30,"minute":52}
+{"stationCode":8034,"month":7,"hour":16,"num_bikes_available":6,"year":2023,"numDocksAvailable":29,"day":30,"minute":52}
+{"stationCode":11047,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":28,"day":30,"minute":52}
+{"stationCode":19043,"month":7,"hour":16,"num_bikes_available":10,"year":2023,"numDocksAvailable":43,"day":30,"minute":52}
+{"stationCode":5032,"month":7,"hour":16,"num_bikes_available":8,"year":2023,"numDocksAvailable":31,"day":30,"minute":52}
+{"stationCode":14020,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":50,"day":30,"minute":52}
+{"stationCode":20042,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":39,"day":30,"minute":52}
+{"stationCode":15067,"month":7,"hour":16,"num_bikes_available":11,"year":2023,"numDocksAvailable":1,"day":30,"minute":52}
+{"stationCode":43401,"month":7,"hour":16,"num_bikes_available":39,"year":2023,"numDocksAvailable":5,"day":30,"minute":52}
+{"stationCode":6006,"month":7,"hour":16,"num_bikes_available":15,"year":2023,"numDocksAvailable":4,"day":30,"minute":52}
+{"stationCode":11027,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":33,"day":30,"minute":52}
+{"stationCode":12128,"month":7,"hour":16,"num_bikes_available":31,"year":2023,"numDocksAvailable":3,"day":30,"minute":52}
+{"stationCode":8010,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":13,"day":30,"minute":52}
+{"stationCode":31022,"month":7,"hour":16,"num_bikes_available":33,"year":2023,"numDocksAvailable":17,"day":30,"minute":52}
+{"stationCode":19101,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":21,"day":30,"minute":52}
+{"stationCode":14003,"month":7,"hour":16,"num_bikes_available":16,"year":2023,"numDocksAvailable":33,"day":30,"minute":52}
+{"stationCode":46002,"month":7,"hour":16,"num_bikes_available":35,"year":2023,"numDocksAvailable":0,"day":30,"minute":52}
+{"stationCode":16107,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":32,"name":"Benjamin Godard - Victor Hugo","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":31104,"month":7,"hour":16,"num_bikes_available":22,"year":2023,"numDocksAvailable":6,"name":"Mairie de Rosny-sous-Bois","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":9020,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":19,"name":"Toudouze - Clauzel","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":12109,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":20,"name":"Mairie du 12ème","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":14111,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":23,"name":"Cassini - Denfert-Rochereau","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":14014,"month":7,"hour":16,"num_bikes_available":25,"year":2023,"numDocksAvailable":34,"name":"Jourdan - Stade Charléty","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":32017,"month":7,"hour":16,"num_bikes_available":11,"year":2023,"numDocksAvailable":8,"name":"Basilique","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":11104,"month":7,"hour":16,"num_bikes_available":0,"year":2023,"numDocksAvailable":20,"name":"Charonne - Robert et Sonia Delaunay","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":8026,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":5,"name":"Messine - Place Du Pérou","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":13007,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":44,"name":"Le Brun - Gobelins","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":6003,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":14,"name":"Saint-Sulpice","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":5110,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":19,"name":"Lacépède - Monge","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":6108,"month":7,"hour":16,"num_bikes_available":10,"year":2023,"numDocksAvailable":7,"name":"Saint-Romain - Cherche-Midi","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":33006,"month":7,"hour":16,"num_bikes_available":15,"year":2023,"numDocksAvailable":14,"name":"André Karman - République","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":42016,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":21,"name":"Pierre et Marie Curie - Maurice Thorez","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":41301,"month":7,"hour":16,"num_bikes_available":37,"year":2023,"numDocksAvailable":12,"name":"Bois de Vincennes - Gare","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":6021,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":18,"name":"Beaux-Arts - Bonaparte","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":21010,"month":7,"hour":16,"num_bikes_available":5,"year":2023,"numDocksAvailable":20,"name":"Silly - Galliéni","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":25006,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":20,"name":"Place Nelson Mandela","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":17038,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":57,"name":"Grande Armée - Brunel","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":15202,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":26,"name":"Bracion - Périphérique","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":7003,"month":7,"hour":16,"num_bikes_available":41,"year":2023,"numDocksAvailable":19,"name":"Square Boucicaut","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":7002,"month":7,"hour":16,"num_bikes_available":22,"year":2023,"numDocksAvailable":10,"name":"Vaneau - Sèvres","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":17041,"month":7,"hour":16,"num_bikes_available":8,"year":2023,"numDocksAvailable":26,"name":"Guersant - Gouvion-Saint-Cyr","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":17026,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":38,"name":"Jouffroy d'Abbans - Wagram","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":5016,"month":7,"hour":16,"num_bikes_available":6,"year":2023,"numDocksAvailable":11,"name":"Thouin - Cardinal Lemoine","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":11025,"month":7,"hour":16,"num_bikes_available":14,"year":2023,"numDocksAvailable":26,"name":"Froment - Bréguet","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":15047,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":51,"name":"Morillons - Dantzig","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":8050,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":24,"name":"Boétie - Ponthieu","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":13101,"month":7,"hour":16,"num_bikes_available":11,"year":2023,"numDocksAvailable":23,"name":"Croulebarde - Corvisart","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":14108,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":14,"name":"Le Brix et Mesmin - Jourdan","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":31024,"month":7,"hour":16,"num_bikes_available":0,"year":2023,"numDocksAvailable":36,"name":"Romainville - Vaillant-Couturier","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":15026,"month":7,"hour":16,"num_bikes_available":22,"year":2023,"numDocksAvailable":10,"name":"Bir Hakeim","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":47007,"month":7,"hour":16,"num_bikes_available":18,"year":2023,"numDocksAvailable":2,"name":"Liberté - Vert-de-Maisons","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":10013,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":51,"name":"Alibert - Jemmapes","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":17044,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":32,"name":"Porte de Saint-Ouen - Bessières","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":19033,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":40,"name":"Cambrai - Benjamin Constant","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":17025,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":32,"name":"Chazelles - Courcelles","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":21326,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":13,"name":"Moulin de Pierre - Abbé Grégoire","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":20143,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":40,"name":"Ramponeau - Belleville","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":43002,"month":7,"hour":16,"num_bikes_available":15,"year":2023,"numDocksAvailable":11,"name":"Lagny - Victor Basch","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":16138,"month":7,"hour":16,"num_bikes_available":11,"year":2023,"numDocksAvailable":18,"name":"Saint-Cloud - Hippodrome","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":21216,"month":7,"hour":16,"num_bikes_available":0,"year":2023,"numDocksAvailable":25,"name":"Louis Lejeune - Barbès","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":15068,"month":7,"hour":16,"num_bikes_available":10,"year":2023,"numDocksAvailable":6,"name":"Général Martial Valin - Pont du Garigliano","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":22207,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":18,"name":"Rond-point du Dr Albert Schweitzer","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":7004,"month":7,"hour":16,"num_bikes_available":9,"year":2023,"numDocksAvailable":9,"name":"Raspail - Varenne","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":92002,"month":7,"hour":16,"num_bikes_available":14,"year":2023,"numDocksAvailable":9,"name":"Théâtre des Amandiers - Palais des sports","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":13030,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":17,"name":"Italie - Tolbiac","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":6029,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":19,"name":"Vaugirard - Monsieur le Prince","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":19027,"month":7,"hour":16,"num_bikes_available":0,"year":2023,"numDocksAvailable":18,"name":"Serrurier","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":31028,"month":7,"hour":16,"num_bikes_available":6,"year":2023,"numDocksAvailable":22,"name":"Raspail Barbès","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":17048,"month":7,"hour":16,"num_bikes_available":6,"year":2023,"numDocksAvailable":24,"name":"De Toqueville - Terrasse","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":44017,"month":7,"hour":16,"num_bikes_available":17,"year":2023,"numDocksAvailable":11,"name":"Jules Guesde - Pont du Port à l'Anglais","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":16118,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":24,"name":"Michel-Ange - Parent de Rosan","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":2017,"month":7,"hour":16,"num_bikes_available":6,"year":2023,"numDocksAvailable":34,"name":"Caire - Dussoubs","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":9008,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":16,"name":"Tour d'Auvergne - Rodier","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":8103,"month":7,"hour":16,"num_bikes_available":11,"year":2023,"numDocksAvailable":12,"name":"Artois - Berri","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":8048,"month":7,"hour":16,"num_bikes_available":5,"year":2023,"numDocksAvailable":16,"name":"Marceau - Chaillot","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":14013,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":10,"name":"Liard - Amiral Mouchez","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":13118,"month":7,"hour":16,"num_bikes_available":59,"year":2023,"numDocksAvailable":3,"name":"Regnault - Patay","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":18111,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":22,"name":"Félix Ziem - Armand Gauthier","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":9002,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":10,"name":"Abbeville - Faubourg Poissonnière","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":48003,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":19,"name":"Youri Gagarine - Karl Marx","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":16110,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":20,"name":"Octave Feuillet - Albéric Magnard","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":18134,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":22,"name":"Ney - Porte de Clignancourt","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":14002,"month":7,"hour":16,"num_bikes_available":21,"year":2023,"numDocksAvailable":25,"name":"Edgar Quinet - Raspail","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":9014,"month":7,"hour":16,"num_bikes_available":8,"year":2023,"numDocksAvailable":27,"name":"Faubourg Montmartre - La Fayette","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":43009,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":44,"name":"Place Jean-Spire-Lemaître","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":8053,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":27,"name":"Place Georges Guillaumin","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":9001,"month":7,"hour":16,"num_bikes_available":0,"year":2023,"numDocksAvailable":17,"name":"Bellefond - Poissonnière","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":17032,"month":7,"hour":16,"num_bikes_available":5,"year":2023,"numDocksAvailable":16,"name":"Jean Oestreicher - Porte de Champerret","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":8016,"month":7,"hour":16,"num_bikes_available":21,"year":2023,"numDocksAvailable":5,"name":"Square Louis XVI","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":10162,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":20,"name":"Alexandre Parodi - Quai de Valmy","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":10115,"month":7,"hour":16,"num_bikes_available":0,"year":2023,"numDocksAvailable":24,"name":"Granges aux Belles","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":10029,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":20,"name":"Dunkerque - Rocroy","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":5005,"month":7,"hour":16,"num_bikes_available":6,"year":2023,"numDocksAvailable":18,"name":"Gay Lussac - Saint-Jacques","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":10161,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":29,"name":"Gare de l'Est - Faubourg-Saint-Martin","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":41303,"month":7,"hour":16,"num_bikes_available":21,"year":2023,"numDocksAvailable":11,"name":"Gare de Nogent-le-Perreux","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":12031,"month":7,"hour":16,"num_bikes_available":34,"year":2023,"numDocksAvailable":0,"name":"Gabriel Lamé","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":7011,"month":7,"hour":16,"num_bikes_available":9,"year":2023,"numDocksAvailable":13,"name":"Las Cases - Bourgogne","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":7018,"month":7,"hour":16,"num_bikes_available":15,"year":2023,"numDocksAvailable":4,"name":"Ségur - d'Estrées","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":5022,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":19,"name":"Boulangers - Cardinal Lemoine","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":9106,"month":7,"hour":16,"num_bikes_available":10,"year":2023,"numDocksAvailable":2,"name":"Boudreau - Auber","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":21328,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":25,"name":"Verger - Colonel Guichard","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":21323,"month":7,"hour":16,"num_bikes_available":30,"year":2023,"numDocksAvailable":1,"name":"Charlot - Stade Gabriel Voisin","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":11046,"month":7,"hour":16,"num_bikes_available":5,"year":2023,"numDocksAvailable":13,"name":"Place de la République - Voltaire","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":8201,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":23,"name":"Arsène Houssaye - Friedland","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":17040,"month":7,"hour":16,"num_bikes_available":13,"year":2023,"numDocksAvailable":35,"name":"Pereire - Ternes","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":9038,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":25,"name":"Douai - Bruxelles","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":8009,"month":7,"hour":16,"num_bikes_available":10,"year":2023,"numDocksAvailable":16,"name":"Gare Saint-Lazare - Isly","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":1001,"month":7,"hour":16,"num_bikes_available":14,"year":2023,"numDocksAvailable":3,"name":"Quai de l'Horloge - Pont Neuf","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":19105,"month":7,"hour":16,"num_bikes_available":0,"year":2023,"numDocksAvailable":17,"name":"Ambroise Rendu - Porte Brunet","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":31103,"month":7,"hour":16,"num_bikes_available":33,"year":2023,"numDocksAvailable":3,"name":"Gare Rosny-Bois-Perrier","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":17008,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":17,"name":"Porte Pouchet-Bessières","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":15112,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":22,"name":"Vigée-Lebrun - Anselme Payen","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":7025,"month":7,"hour":16,"num_bikes_available":32,"year":2023,"numDocksAvailable":0,"name":"Octave Gréard - Tour Eiffel","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":6001,"month":7,"hour":16,"num_bikes_available":10,"year":2023,"numDocksAvailable":6,"name":"Institut de France","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":31706,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":24,"name":"Château - République","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":22409,"month":7,"hour":16,"num_bikes_available":5,"year":2023,"numDocksAvailable":11,"name":"Henri Barbusse - Stalingrad","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":5020,"month":7,"hour":16,"num_bikes_available":33,"year":2023,"numDocksAvailable":6,"name":"Institut du Monde Arabe - Saint-Germain","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":19015,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":21,"name":"Thionville - Ourcq","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":9022,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":30,"name":"Rossini - Laffitte","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":26003,"month":7,"hour":16,"num_bikes_available":10,"year":2023,"numDocksAvailable":6,"name":"Argenteuil - Voltaire","lon":2,"day":30,"lat":48,"minute":57}
+{"stationCode":16107,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":32,"name":"Benjamin Godard - Victor Hugo","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":31104,"month":7,"hour":16,"num_bikes_available":22,"year":2023,"numDocksAvailable":6,"name":"Mairie de Rosny-sous-Bois","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":9020,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":19,"name":"Toudouze - Clauzel","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":12109,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":20,"name":"Mairie du 12ème","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":14111,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":23,"name":"Cassini - Denfert-Rochereau","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":14014,"month":7,"hour":16,"num_bikes_available":25,"year":2023,"numDocksAvailable":34,"name":"Jourdan - Stade Charléty","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":32017,"month":7,"hour":16,"num_bikes_available":11,"year":2023,"numDocksAvailable":8,"name":"Basilique","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":11104,"month":7,"hour":16,"num_bikes_available":0,"year":2023,"numDocksAvailable":20,"name":"Charonne - Robert et Sonia Delaunay","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":8026,"month":7,"hour":16,"num_bikes_available":6,"year":2023,"numDocksAvailable":6,"name":"Messine - Place Du Pérou","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":13007,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":44,"name":"Le Brun - Gobelins","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":6003,"month":7,"hour":16,"num_bikes_available":6,"year":2023,"numDocksAvailable":15,"name":"Saint-Sulpice","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":5110,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":19,"name":"Lacépède - Monge","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":6108,"month":7,"hour":16,"num_bikes_available":10,"year":2023,"numDocksAvailable":7,"name":"Saint-Romain - Cherche-Midi","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":33006,"month":7,"hour":16,"num_bikes_available":15,"year":2023,"numDocksAvailable":14,"name":"André Karman - République","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":42016,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":21,"name":"Pierre et Marie Curie - Maurice Thorez","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":41301,"month":7,"hour":16,"num_bikes_available":39,"year":2023,"numDocksAvailable":10,"name":"Bois de Vincennes - Gare","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":6021,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":18,"name":"Beaux-Arts - Bonaparte","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":21010,"month":7,"hour":16,"num_bikes_available":5,"year":2023,"numDocksAvailable":20,"name":"Silly - Galliéni","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":25006,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":20,"name":"Place Nelson Mandela","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":17038,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":57,"name":"Grande Armée - Brunel","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":15202,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":26,"name":"Bracion - Périphérique","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":7003,"month":7,"hour":16,"num_bikes_available":43,"year":2023,"numDocksAvailable":17,"name":"Square Boucicaut","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":7002,"month":7,"hour":16,"num_bikes_available":23,"year":2023,"numDocksAvailable":9,"name":"Vaneau - Sèvres","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":17041,"month":7,"hour":16,"num_bikes_available":8,"year":2023,"numDocksAvailable":26,"name":"Guersant - Gouvion-Saint-Cyr","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":17026,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":38,"name":"Jouffroy d'Abbans - Wagram","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":5016,"month":7,"hour":16,"num_bikes_available":6,"year":2023,"numDocksAvailable":11,"name":"Thouin - Cardinal Lemoine","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":11025,"month":7,"hour":16,"num_bikes_available":13,"year":2023,"numDocksAvailable":27,"name":"Froment - Bréguet","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":15047,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":51,"name":"Morillons - Dantzig","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":8050,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":24,"name":"Boétie - Ponthieu","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":13101,"month":7,"hour":16,"num_bikes_available":10,"year":2023,"numDocksAvailable":24,"name":"Croulebarde - Corvisart","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":14108,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":14,"name":"Le Brix et Mesmin - Jourdan","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":31024,"month":7,"hour":16,"num_bikes_available":0,"year":2023,"numDocksAvailable":36,"name":"Romainville - Vaillant-Couturier","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":15026,"month":7,"hour":16,"num_bikes_available":23,"year":2023,"numDocksAvailable":9,"name":"Bir Hakeim","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":47007,"month":7,"hour":16,"num_bikes_available":18,"year":2023,"numDocksAvailable":2,"name":"Liberté - Vert-de-Maisons","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":10013,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":51,"name":"Alibert - Jemmapes","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":17044,"month":7,"hour":16,"num_bikes_available":6,"year":2023,"numDocksAvailable":33,"name":"Porte de Saint-Ouen - Bessières","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":19033,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":40,"name":"Cambrai - Benjamin Constant","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":17025,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":31,"name":"Chazelles - Courcelles","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":21326,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":13,"name":"Moulin de Pierre - Abbé Grégoire","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":20143,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":39,"name":"Ramponeau - Belleville","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":43002,"month":7,"hour":16,"num_bikes_available":16,"year":2023,"numDocksAvailable":10,"name":"Lagny - Victor Basch","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":16138,"month":7,"hour":16,"num_bikes_available":11,"year":2023,"numDocksAvailable":18,"name":"Saint-Cloud - Hippodrome","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":21216,"month":7,"hour":16,"num_bikes_available":0,"year":2023,"numDocksAvailable":25,"name":"Louis Lejeune - Barbès","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":15068,"month":7,"hour":16,"num_bikes_available":10,"year":2023,"numDocksAvailable":6,"name":"Général Martial Valin - Pont du Garigliano","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":22207,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":18,"name":"Rond-point du Dr Albert Schweitzer","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":7004,"month":7,"hour":16,"num_bikes_available":9,"year":2023,"numDocksAvailable":9,"name":"Raspail - Varenne","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":92002,"month":7,"hour":16,"num_bikes_available":14,"year":2023,"numDocksAvailable":9,"name":"Théâtre des Amandiers - Palais des sports","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":13030,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":18,"name":"Italie - Tolbiac","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":6029,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":19,"name":"Vaugirard - Monsieur le Prince","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":19027,"month":7,"hour":16,"num_bikes_available":0,"year":2023,"numDocksAvailable":18,"name":"Serrurier","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":31028,"month":7,"hour":16,"num_bikes_available":6,"year":2023,"numDocksAvailable":22,"name":"Raspail Barbès","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":17048,"month":7,"hour":16,"num_bikes_available":6,"year":2023,"numDocksAvailable":24,"name":"De Toqueville - Terrasse","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":44017,"month":7,"hour":16,"num_bikes_available":17,"year":2023,"numDocksAvailable":11,"name":"Jules Guesde - Pont du Port à l'Anglais","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":16118,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":24,"name":"Michel-Ange - Parent de Rosan","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":2017,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":33,"name":"Caire - Dussoubs","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":9008,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":16,"name":"Tour d'Auvergne - Rodier","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":8103,"month":7,"hour":16,"num_bikes_available":11,"year":2023,"numDocksAvailable":12,"name":"Artois - Berri","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":8048,"month":7,"hour":16,"num_bikes_available":5,"year":2023,"numDocksAvailable":16,"name":"Marceau - Chaillot","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":14013,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":10,"name":"Liard - Amiral Mouchez","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":13118,"month":7,"hour":16,"num_bikes_available":59,"year":2023,"numDocksAvailable":3,"name":"Regnault - Patay","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":18111,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":22,"name":"Félix Ziem - Armand Gauthier","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":9002,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":10,"name":"Abbeville - Faubourg Poissonnière","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":48003,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":19,"name":"Youri Gagarine - Karl Marx","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":16110,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":20,"name":"Octave Feuillet - Albéric Magnard","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":18134,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":22,"name":"Ney - Porte de Clignancourt","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":14002,"month":7,"hour":16,"num_bikes_available":21,"year":2023,"numDocksAvailable":25,"name":"Edgar Quinet - Raspail","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":9014,"month":7,"hour":16,"num_bikes_available":9,"year":2023,"numDocksAvailable":26,"name":"Faubourg Montmartre - La Fayette","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":43009,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":44,"name":"Place Jean-Spire-Lemaître","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":8053,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":27,"name":"Place Georges Guillaumin","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":9001,"month":7,"hour":16,"num_bikes_available":0,"year":2023,"numDocksAvailable":17,"name":"Bellefond - Poissonnière","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":17032,"month":7,"hour":16,"num_bikes_available":5,"year":2023,"numDocksAvailable":16,"name":"Jean Oestreicher - Porte de Champerret","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":8016,"month":7,"hour":16,"num_bikes_available":21,"year":2023,"numDocksAvailable":5,"name":"Square Louis XVI","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":10162,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":20,"name":"Alexandre Parodi - Quai de Valmy","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":10115,"month":7,"hour":16,"num_bikes_available":0,"year":2023,"numDocksAvailable":24,"name":"Granges aux Belles","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":10029,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":20,"name":"Dunkerque - Rocroy","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":5005,"month":7,"hour":16,"num_bikes_available":6,"year":2023,"numDocksAvailable":18,"name":"Gay Lussac - Saint-Jacques","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":10161,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":29,"name":"Gare de l'Est - Faubourg-Saint-Martin","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":41303,"month":7,"hour":16,"num_bikes_available":21,"year":2023,"numDocksAvailable":11,"name":"Gare de Nogent-le-Perreux","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":12031,"month":7,"hour":16,"num_bikes_available":33,"year":2023,"numDocksAvailable":1,"name":"Gabriel Lamé","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":7011,"month":7,"hour":16,"num_bikes_available":9,"year":2023,"numDocksAvailable":13,"name":"Las Cases - Bourgogne","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":7018,"month":7,"hour":16,"num_bikes_available":15,"year":2023,"numDocksAvailable":4,"name":"Ségur - d'Estrées","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":5022,"month":7,"hour":16,"num_bikes_available":0,"year":2023,"numDocksAvailable":20,"name":"Boulangers - Cardinal Lemoine","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":9106,"month":7,"hour":16,"num_bikes_available":10,"year":2023,"numDocksAvailable":2,"name":"Boudreau - Auber","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":21328,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":25,"name":"Verger - Colonel Guichard","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":21323,"month":7,"hour":16,"num_bikes_available":30,"year":2023,"numDocksAvailable":1,"name":"Charlot - Stade Gabriel Voisin","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":11046,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":15,"name":"Place de la République - Voltaire","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":8201,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":23,"name":"Arsène Houssaye - Friedland","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":17040,"month":7,"hour":16,"num_bikes_available":12,"year":2023,"numDocksAvailable":36,"name":"Pereire - Ternes","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":9038,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":25,"name":"Douai - Bruxelles","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":8009,"month":7,"hour":16,"num_bikes_available":9,"year":2023,"numDocksAvailable":17,"name":"Gare Saint-Lazare - Isly","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":1001,"month":7,"hour":16,"num_bikes_available":14,"year":2023,"numDocksAvailable":3,"name":"Quai de l'Horloge - Pont Neuf","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":19105,"month":7,"hour":16,"num_bikes_available":0,"year":2023,"numDocksAvailable":17,"name":"Ambroise Rendu - Porte Brunet","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":31103,"month":7,"hour":16,"num_bikes_available":33,"year":2023,"numDocksAvailable":3,"name":"Gare Rosny-Bois-Perrier","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":17008,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":17,"name":"Porte Pouchet-Bessières","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":15112,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":22,"name":"Vigée-Lebrun - Anselme Payen","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":7025,"month":7,"hour":16,"num_bikes_available":32,"year":2023,"numDocksAvailable":0,"name":"Octave Gréard - Tour Eiffel","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":6001,"month":7,"hour":16,"num_bikes_available":10,"year":2023,"numDocksAvailable":6,"name":"Institut de France","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":31706,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":24,"name":"Château - République","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":22409,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":9,"name":"Henri Barbusse - Stalingrad","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":5020,"month":7,"hour":16,"num_bikes_available":33,"year":2023,"numDocksAvailable":6,"name":"Institut du Monde Arabe - Saint-Germain","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":19015,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":21,"name":"Thionville - Ourcq","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":9022,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":30,"name":"Rossini - Laffitte","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":26003,"month":7,"hour":16,"num_bikes_available":10,"year":2023,"numDocksAvailable":6,"name":"Argenteuil - Voltaire","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":17004,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":37,"name":"Legendre - Clichy","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":19003,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":20,"name":"Quai de la Seine","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":8036,"month":7,"hour":16,"num_bikes_available":5,"year":2023,"numDocksAvailable":28,"name":"Lisbonne - Monceau","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":12151,"month":7,"hour":16,"num_bikes_available":33,"year":2023,"numDocksAvailable":26,"name":"Gare de Lyon - Place Louis Armand","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":18107,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":33,"name":"Chartres - La Charbonnière","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":92007,"month":7,"hour":16,"num_bikes_available":12,"year":2023,"numDocksAvailable":10,"name":"Pesaro - Préfecture","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":16026,"month":7,"hour":16,"num_bikes_available":10,"year":2023,"numDocksAvailable":11,"name":"Ranelagh - Mozart","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":9028,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":14,"name":"Moncey - Blanche","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":10107,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":46,"name":"Gare du Nord - Hôpital Lariboisière","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":26002,"month":7,"hour":16,"num_bikes_available":17,"year":2023,"numDocksAvailable":23,"name":"Redoute - Les Courtilles","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":17043,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":35,"name":"Belidor - Gouvion-Saint-Cyr","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":19026,"month":7,"hour":16,"num_bikes_available":0,"year":2023,"numDocksAvailable":17,"name":"Place de Rhin et Danube","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":16039,"month":7,"hour":16,"num_bikes_available":6,"year":2023,"numDocksAvailable":42,"name":"Exelmans - Versailles","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":11023,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":44,"name":"Saint-Maur - Roquette","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":45003,"month":7,"hour":16,"num_bikes_available":14,"year":2023,"numDocksAvailable":21,"name":"11 Novembre 1918 - 8 Mai 1945","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":11002,"month":7,"hour":16,"num_bikes_available":11,"year":2023,"numDocksAvailable":12,"name":"Roquette - Thiéré","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":17030,"month":7,"hour":16,"num_bikes_available":5,"year":2023,"numDocksAvailable":18,"name":"Pereire - Rennequin","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":12111,"month":7,"hour":16,"num_bikes_available":5,"year":2023,"numDocksAvailable":22,"name":"Claude Decaen - Cannebière","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":8034,"month":7,"hour":16,"num_bikes_available":6,"year":2023,"numDocksAvailable":29,"name":"Berri - Haussmann","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":11047,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":28,"name":"Amelot - Saint-Sébastien","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":19043,"month":7,"hour":16,"num_bikes_available":14,"year":2023,"numDocksAvailable":39,"name":"Delphine Seyrig - Général Leclerc","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":5032,"month":7,"hour":16,"num_bikes_available":8,"year":2023,"numDocksAvailable":31,"name":"Panthéon - Valette","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":14020,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":50,"name":"Cimetière de Montrouge","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":20042,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":39,"name":"Pyrénées - Emmery","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":15067,"month":7,"hour":16,"num_bikes_available":11,"year":2023,"numDocksAvailable":1,"name":"Desaix - Edgar Faure","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":43401,"month":7,"hour":16,"num_bikes_available":39,"year":2023,"numDocksAvailable":5,"name":"Gare RER - Canadiens","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":6006,"month":7,"hour":16,"num_bikes_available":18,"year":2023,"numDocksAvailable":1,"name":"Notre-Dame-des-Champs - Stanislas","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":11027,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":33,"name":"Saint-Ambroise - Parmentier","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":12128,"month":7,"hour":16,"num_bikes_available":31,"year":2023,"numDocksAvailable":3,"name":"Pyramide - Ecole du Breuil","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":8010,"month":7,"hour":16,"num_bikes_available":0,"year":2023,"numDocksAvailable":14,"name":"Liège - Moscou","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":31022,"month":7,"hour":16,"num_bikes_available":30,"year":2023,"numDocksAvailable":20,"name":"Mairie de Montreuil","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":19101,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":21,"name":"Square Simon Bolivar","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":14003,"month":7,"hour":16,"num_bikes_available":16,"year":2023,"numDocksAvailable":33,"name":"Schoelcher - Raspail","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":46002,"month":7,"hour":16,"num_bikes_available":35,"year":2023,"numDocksAvailable":0,"name":"Rouget de Lisle","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":18003,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":39,"name":"Cimetière de Montmartre","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":11113,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":56,"name":"Richard Lenoir - Republique","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":10016,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":11,"name":"Récollets - Square Villemin","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":31009,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":24,"name":"Place Du Général De Gaulle","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":41302,"month":7,"hour":16,"num_bikes_available":20,"year":2023,"numDocksAvailable":29,"name":"Charles de Gaulle - Beauté","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":21212,"month":7,"hour":16,"num_bikes_available":5,"year":2023,"numDocksAvailable":17,"name":"Marne - Germain Dardan","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":5018,"month":7,"hour":16,"num_bikes_available":25,"year":2023,"numDocksAvailable":11,"name":"Mutualité","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":33017,"month":7,"hour":16,"num_bikes_available":16,"year":2023,"numDocksAvailable":13,"name":"Anatole France - President Roosevelt","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":15042,"month":7,"hour":16,"num_bikes_available":16,"year":2023,"numDocksAvailable":0,"name":"Henry Farman","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":20112,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":20,"name":"Jourdain - Place des Grandes Rigoles","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":19044,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":43,"name":"Grands Moulins de Pantin","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":18011,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":37,"name":"Pajol - Place Herbert","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":43008,"month":7,"hour":16,"num_bikes_available":10,"year":2023,"numDocksAvailable":15,"name":"Fontenay - Libération","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":33102,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":15,"name":"Gabriel Péri - Francisco Ferrer","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":18031,"month":7,"hour":16,"num_bikes_available":0,"year":2023,"numDocksAvailable":0,"name":"Place Albert Kahn","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":42706,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":22,"name":"Roger Salengro - Fontainebleau","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":15104,"month":7,"hour":16,"num_bikes_available":53,"year":2023,"numDocksAvailable":11,"name":"Hôpital Européen Georges Pompidou","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":44006,"month":7,"hour":16,"num_bikes_available":19,"year":2023,"numDocksAvailable":12,"name":"Concorde - Stalingrad","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":15105,"month":7,"hour":16,"num_bikes_available":13,"year":2023,"numDocksAvailable":12,"name":"Fédération - Suffren","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":19120,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":25,"name":"Carducci - Place Hannah Arendt","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":5004,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":15,"name":"Saint-Jacques - Val de Grâce","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":19103,"month":7,"hour":16,"num_bikes_available":4,"year":2023,"numDocksAvailable":16,"name":"Manin - Carrières d'Amérique","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":14138,"month":7,"hour":16,"num_bikes_available":5,"year":2023,"numDocksAvailable":25,"name":"Porte de Vanves","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":12114,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":21,"name":"Victor Hugo - Jeanne Jugan","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":13001,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":10,"name":"Port-Royal - Hôpital du Val-de-Grâce","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":46003,"month":7,"hour":16,"num_bikes_available":12,"year":2023,"numDocksAvailable":12,"name":"Conservatoire de Musique","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":41209,"month":7,"hour":16,"num_bikes_available":8,"year":2023,"numDocksAvailable":7,"name":"Cimetière de Fontenay-sous-Bois","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":21312,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":27,"name":"Lucie Aubrac - Fort","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":10024,"month":7,"hour":16,"num_bikes_available":1,"year":2023,"numDocksAvailable":16,"name":"Buisson Saint-Louis - Saint-Maur","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":8045,"month":7,"hour":16,"num_bikes_available":33,"year":2023,"numDocksAvailable":17,"name":"Place de la Reine Astrid","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":18028,"month":7,"hour":16,"num_bikes_available":0,"year":2023,"numDocksAvailable":32,"name":"Championnet - Vauvenargues","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":42014,"month":7,"hour":16,"num_bikes_available":24,"year":2023,"numDocksAvailable":7,"name":"Place Marcel Cachin","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":8017,"month":7,"hour":16,"num_bikes_available":8,"year":2023,"numDocksAvailable":55,"name":"Rocher - Laborde","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":15054,"month":7,"hour":16,"num_bikes_available":7,"year":2023,"numDocksAvailable":11,"name":"Lecourbe - Jean Maridor","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":15106,"month":7,"hour":16,"num_bikes_available":28,"year":2023,"numDocksAvailable":6,"name":"Grenelle - Violet","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":14008,"month":7,"hour":16,"num_bikes_available":3,"year":2023,"numDocksAvailable":34,"name":"Mouton Duvernet - Général Leclerc","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":5124,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":22,"name":"Erasme - Ulm","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":14106,"month":7,"hour":16,"num_bikes_available":5,"year":2023,"numDocksAvailable":15,"name":"Marc Sangnier - Porte de Vanves","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":18046,"month":7,"hour":16,"num_bikes_available":0,"year":2023,"numDocksAvailable":29,"name":"Etienne Jodelle - Saint Ouen","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":22406,"month":7,"hour":16,"num_bikes_available":2,"year":2023,"numDocksAvailable":21,"name":"Guy Môquet - Etienne Dolet","lon":2,"day":30,"lat":48,"minute":58}
+{"stationCode":35002,"month":7,"hour":16,"num_bikes_available":18,"year":2023,"numDocksAvailable":10,"name":"Jean Jaurès - Presles","lon":2,"day":30,"lat":48,"minute":58}
+[2023-07-31 13:15:05,172] {python.py:173} INFO - Done. Returned value was: None
+[2023-07-31 13:15:05,190] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=s3_redshift_dag, task_id=load_from_s3, execution_date=20230731T131502, start_date=20230731T131504, end_date=20230731T131505
+[2023-07-31 13:15:05,491] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-07-31 13:15:05,996] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
