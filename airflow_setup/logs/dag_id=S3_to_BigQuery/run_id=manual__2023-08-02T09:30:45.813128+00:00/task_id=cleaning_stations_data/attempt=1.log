@@ -1,0 +1,34 @@
+[2023-08-02 09:30:55,538] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: S3_to_BigQuery.cleaning_stations_data manual__2023-08-02T09:30:45.813128+00:00 [queued]>
+[2023-08-02 09:30:55,548] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: S3_to_BigQuery.cleaning_stations_data manual__2023-08-02T09:30:45.813128+00:00 [queued]>
+[2023-08-02 09:30:55,548] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-02 09:30:55,548] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2023-08-02 09:30:55,548] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-02 09:30:56,281] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): cleaning_stations_data> on 2023-08-02 09:30:45.813128+00:00
+[2023-08-02 09:30:56,296] {standard_task_runner.py:52} INFO - Started process 10257 to run task
+[2023-08-02 09:30:56,305] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'S3_to_BigQuery', 'cleaning_stations_data', 'manual__2023-08-02T09:30:45.813128+00:00', '--job-id', '314', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpfqpb66b6', '--error-file', '/tmp/tmpueoq7dg_']
+[2023-08-02 09:30:56,308] {standard_task_runner.py:80} INFO - Job 314: Subtask cleaning_stations_data
+[2023-08-02 09:30:56,408] {task_command.py:370} INFO - Running <TaskInstance: S3_to_BigQuery.cleaning_stations_data manual__2023-08-02T09:30:45.813128+00:00 [running]> on host 656341a29da6
+[2023-08-02 09:30:56,535] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=S3_to_BigQuery
+AIRFLOW_CTX_TASK_ID=cleaning_stations_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-08-02T09:30:45.813128+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-08-02T09:30:45.813128+00:00
+[2023-08-02 09:30:56,538] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 28, in cleaning_stations_data
+    return cleaning("load_stations_data",ti)
+  File "/opt/airflow/plugins/cleaning.py", line 5, in cleaning
+    json_object =  ti.xcom.pull(key='df',task_ids=task_id)
+AttributeError: 'TaskInstance' object has no attribute 'xcom'
+[2023-08-02 09:30:56,561] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=S3_to_BigQuery, task_id=cleaning_stations_data, execution_date=20230802T093045, start_date=20230802T093055, end_date=20230802T093056
+[2023-08-02 09:30:56,602] {standard_task_runner.py:97} ERROR - Failed to execute job 314 for task cleaning_stations_data ('TaskInstance' object has no attribute 'xcom'; 10257)
+[2023-08-02 09:30:56,638] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-08-02 09:30:56,724] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

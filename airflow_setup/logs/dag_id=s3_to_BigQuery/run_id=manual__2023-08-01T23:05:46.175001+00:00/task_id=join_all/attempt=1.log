@@ -1,0 +1,28 @@
+[2023-08-01 23:05:57,136] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: s3_to_BigQuery.join_all manual__2023-08-01T23:05:46.175001+00:00 [queued]>
+[2023-08-01 23:05:57,144] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: s3_to_BigQuery.join_all manual__2023-08-01T23:05:46.175001+00:00 [queued]>
+[2023-08-01 23:05:57,144] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-01 23:05:57,145] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2023-08-01 23:05:57,145] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-01 23:05:57,803] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): join_all> on 2023-08-01 23:05:46.175001+00:00
+[2023-08-01 23:05:57,819] {standard_task_runner.py:52} INFO - Started process 97 to run task
+[2023-08-01 23:05:57,828] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 's3_to_BigQuery', 'join_all', 'manual__2023-08-01T23:05:46.175001+00:00', '--job-id', '220', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpo1n9a3p3', '--error-file', '/tmp/tmpw_qb1c2b']
+[2023-08-01 23:05:57,832] {standard_task_runner.py:80} INFO - Job 220: Subtask join_all
+[2023-08-01 23:05:58,417] {task_command.py:370} INFO - Running <TaskInstance: s3_to_BigQuery.join_all manual__2023-08-01T23:05:46.175001+00:00 [running]> on host e73b972b08ee
+[2023-08-01 23:05:58,742] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=s3_to_BigQuery
+AIRFLOW_CTX_TASK_ID=join_all
+AIRFLOW_CTX_EXECUTION_DATE=2023-08-01T23:05:46.175001+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-08-01T23:05:46.175001+00:00
+[2023-08-01 23:05:58,743] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2023-08-01 23:05:58,744] {subprocess.py:74} INFO - Running command: ['bash', '-c', "echo 'Join all!'"]
+[2023-08-01 23:05:58,778] {subprocess.py:85} INFO - Output:
+[2023-08-01 23:05:58,779] {subprocess.py:92} INFO - Join all!
+[2023-08-01 23:05:58,780] {subprocess.py:96} INFO - Command exited with return code 0
+[2023-08-01 23:05:59,047] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=s3_to_BigQuery, task_id=join_all, execution_date=20230801T230546, start_date=20230801T230557, end_date=20230801T230559
+[2023-08-01 23:05:59,324] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-08-01 23:05:59,557] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,24 @@
+[2023-08-02 08:25:16,884] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: S3_to_BigQuery.load_stations_data manual__2023-08-02T08:25:14.876465+00:00 [queued]>
+[2023-08-02 08:25:16,898] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: S3_to_BigQuery.load_stations_data manual__2023-08-02T08:25:14.876465+00:00 [queued]>
+[2023-08-02 08:25:16,898] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-02 08:25:16,898] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2023-08-02 08:25:16,898] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-02 08:25:16,924] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): load_stations_data> on 2023-08-02 08:25:14.876465+00:00
+[2023-08-02 08:25:16,930] {standard_task_runner.py:52} INFO - Started process 7105 to run task
+[2023-08-02 08:25:16,934] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'S3_to_BigQuery', 'load_stations_data', 'manual__2023-08-02T08:25:14.876465+00:00', '--job-id', '258', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp90caa5fx', '--error-file', '/tmp/tmp8t5rumzk']
+[2023-08-02 08:25:16,935] {standard_task_runner.py:80} INFO - Job 258: Subtask load_stations_data
+[2023-08-02 08:25:17,008] {task_command.py:370} INFO - Running <TaskInstance: S3_to_BigQuery.load_stations_data manual__2023-08-02T08:25:14.876465+00:00 [running]> on host 656341a29da6
+[2023-08-02 08:25:17,094] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=S3_to_BigQuery
+AIRFLOW_CTX_TASK_ID=load_stations_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-08-02T08:25:14.876465+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-08-02T08:25:14.876465+00:00
+[2023-08-02 08:25:19,463] {logging_mixin.py:115} INFO - Error: 'task_instance'
+[2023-08-02 08:25:19,571] {python.py:173} INFO - Done. Returned value was: None
+[2023-08-02 08:25:19,594] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=S3_to_BigQuery, task_id=load_stations_data, execution_date=20230802T082514, start_date=20230802T082516, end_date=20230802T082519
+[2023-08-02 08:25:19,796] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-08-02 08:25:19,926] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

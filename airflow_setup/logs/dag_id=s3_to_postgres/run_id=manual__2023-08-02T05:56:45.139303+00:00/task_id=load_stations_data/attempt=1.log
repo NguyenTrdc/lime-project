@@ -1,0 +1,30 @@
+[2023-08-02 05:56:47,550] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: s3_to_postgres.load_stations_data manual__2023-08-02T05:56:45.139303+00:00 [queued]>
+[2023-08-02 05:56:47,566] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: s3_to_postgres.load_stations_data manual__2023-08-02T05:56:45.139303+00:00 [queued]>
+[2023-08-02 05:56:47,566] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-02 05:56:47,566] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2023-08-02 05:56:47,566] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-02 05:56:47,659] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): load_stations_data> on 2023-08-02 05:56:45.139303+00:00
+[2023-08-02 05:56:47,673] {standard_task_runner.py:52} INFO - Started process 239 to run task
+[2023-08-02 05:56:47,684] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 's3_to_postgres', 'load_stations_data', 'manual__2023-08-02T05:56:45.139303+00:00', '--job-id', '237', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpo8wz1gf8', '--error-file', '/tmp/tmpy6hc015f']
+[2023-08-02 05:56:47,688] {standard_task_runner.py:80} INFO - Job 237: Subtask load_stations_data
+[2023-08-02 05:56:47,760] {task_command.py:370} INFO - Running <TaskInstance: s3_to_postgres.load_stations_data manual__2023-08-02T05:56:45.139303+00:00 [running]> on host 656341a29da6
+[2023-08-02 05:56:47,845] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=s3_to_postgres
+AIRFLOW_CTX_TASK_ID=load_stations_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-08-02T05:56:45.139303+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-08-02T05:56:45.139303+00:00
+[2023-08-02 05:56:47,845] {logging_mixin.py:115} INFO - 
+ heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeyy
+[2023-08-02 05:56:50,093] {logging_mixin.py:115} INFO - 
+✅ DataFrame created ! ✅
+[2023-08-02 05:56:55,271] {gbq.py:606} INFO - 16003 out of 16003 rows loaded.
+[2023-08-02 05:56:55,271] {logging_mixin.py:115} INFO - 
+✅ Table 2023-08-01 upload on BigQuery! ✅
+[2023-08-02 05:56:55,272] {python.py:173} INFO - Done. Returned value was: None
+[2023-08-02 05:56:55,312] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=s3_to_postgres, task_id=load_stations_data, execution_date=20230802T055645, start_date=20230802T055647, end_date=20230802T055655
+[2023-08-02 05:56:55,393] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-08-02 05:56:55,435] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

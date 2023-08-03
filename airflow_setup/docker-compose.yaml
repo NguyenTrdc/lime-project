@@ -63,7 +63,8 @@ x-airflow-common:
     - ./dags:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
-    - /home/andre/NguyenTrdc/lime-project/raw_data/lime-project-key.json:/opt/airflow/pluginslime-project-key.json
+    - /home/andre/NguyenTrdc/lime-project/raw_data/lime-project-key.json:/opt/airflow/lime-project-key.json
+
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
     &airflow-common-depends-on

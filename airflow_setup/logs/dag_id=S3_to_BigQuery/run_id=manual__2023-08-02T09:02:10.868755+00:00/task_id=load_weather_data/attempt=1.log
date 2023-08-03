@@ -1,0 +1,34 @@
+[2023-08-02 09:02:12,871] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: S3_to_BigQuery.load_weather_data manual__2023-08-02T09:02:10.868755+00:00 [queued]>
+[2023-08-02 09:02:12,878] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: S3_to_BigQuery.load_weather_data manual__2023-08-02T09:02:10.868755+00:00 [queued]>
+[2023-08-02 09:02:12,878] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-02 09:02:12,878] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2023-08-02 09:02:12,878] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-02 09:02:12,906] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): load_weather_data> on 2023-08-02 09:02:10.868755+00:00
+[2023-08-02 09:02:12,910] {standard_task_runner.py:52} INFO - Started process 8896 to run task
+[2023-08-02 09:02:12,912] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'S3_to_BigQuery', 'load_weather_data', 'manual__2023-08-02T09:02:10.868755+00:00', '--job-id', '294', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpcscopqrk', '--error-file', '/tmp/tmpa03mcyoq']
+[2023-08-02 09:02:12,913] {standard_task_runner.py:80} INFO - Job 294: Subtask load_weather_data
+[2023-08-02 09:02:12,969] {task_command.py:370} INFO - Running <TaskInstance: S3_to_BigQuery.load_weather_data manual__2023-08-02T09:02:10.868755+00:00 [running]> on host 656341a29da6
+[2023-08-02 09:02:13,065] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=S3_to_BigQuery
+AIRFLOW_CTX_TASK_ID=load_weather_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-08-02T09:02:10.868755+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-08-02T09:02:10.868755+00:00
+[2023-08-02 09:02:13,620] {logging_mixin.py:115} INFO - 
+DataFrame push into xcom.
+[2023-08-02 09:02:13,634] {logging_mixin.py:115} INFO - 
+DATAFRAME SHAPE : (13, 11)
+[2023-08-02 09:02:13,634] {logging_mixin.py:115} INFO - 
+✅ DataFrame created ! ✅
+[2023-08-02 09:02:13,635] {logging_mixin.py:115} INFO - 
+KEY XCOM : weather_topic_json
+[2023-08-02 09:02:13,685] {logging_mixin.py:115} INFO - 
+✅ Push to xcom ! ✅
+[2023-08-02 09:02:14,087] {logging_mixin.py:115} INFO - Error: Could not create the table because it already exists. Change the if_exists parameter to 'append' or 'replace' data.
+[2023-08-02 09:02:14,090] {python.py:173} INFO - Done. Returned value was: None
+[2023-08-02 09:02:14,125] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=S3_to_BigQuery, task_id=load_weather_data, execution_date=20230802T090210, start_date=20230802T090212, end_date=20230802T090214
+[2023-08-02 09:02:15,012] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-08-02 09:02:15,312] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

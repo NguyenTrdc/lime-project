@@ -1,0 +1,36 @@
+[2023-08-02 09:32:47,175] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: S3_to_BigQuery.cleaning_stations_data manual__2023-08-02T09:32:38.547303+00:00 [queued]>
+[2023-08-02 09:32:47,185] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: S3_to_BigQuery.cleaning_stations_data manual__2023-08-02T09:32:38.547303+00:00 [queued]>
+[2023-08-02 09:32:47,185] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-02 09:32:47,185] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2023-08-02 09:32:47,185] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-02 09:32:47,222] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): cleaning_stations_data> on 2023-08-02 09:32:38.547303+00:00
+[2023-08-02 09:32:47,226] {standard_task_runner.py:52} INFO - Started process 10356 to run task
+[2023-08-02 09:32:47,229] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'S3_to_BigQuery', 'cleaning_stations_data', 'manual__2023-08-02T09:32:38.547303+00:00', '--job-id', '320', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp2y62o94b', '--error-file', '/tmp/tmp1qeqovqi']
+[2023-08-02 09:32:47,230] {standard_task_runner.py:80} INFO - Job 320: Subtask cleaning_stations_data
+[2023-08-02 09:32:47,399] {task_command.py:370} INFO - Running <TaskInstance: S3_to_BigQuery.cleaning_stations_data manual__2023-08-02T09:32:38.547303+00:00 [running]> on host 656341a29da6
+[2023-08-02 09:32:47,566] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=S3_to_BigQuery
+AIRFLOW_CTX_TASK_ID=cleaning_stations_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-08-02T09:32:38.547303+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-08-02T09:32:38.547303+00:00
+[2023-08-02 09:32:47,674] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/dag.py", line 28, in cleaning_stations_data
+    return cleaning("load_stations_data",ti)
+  File "/opt/airflow/plugins/cleaning.py", line 6, in cleaning
+    df = pd.DataFrame.from_dict(json_object, orient="index").T
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/frame.py", line 1583, in from_dict
+    if isinstance(list(data.values())[0], (Series, dict)):
+AttributeError: 'str' object has no attribute 'values'
+[2023-08-02 09:32:47,683] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=S3_to_BigQuery, task_id=cleaning_stations_data, execution_date=20230802T093238, start_date=20230802T093247, end_date=20230802T093247
+[2023-08-02 09:32:47,715] {standard_task_runner.py:97} ERROR - Failed to execute job 320 for task cleaning_stations_data ('str' object has no attribute 'values'; 10356)
+[2023-08-02 09:32:47,762] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-08-02 09:32:47,843] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,36 @@
+[2023-08-02 09:04:43,017] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: S3_to_BigQuery.load_weather_data manual__2023-08-02T09:04:38.919949+00:00 [queued]>
+[2023-08-02 09:04:43,026] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: S3_to_BigQuery.load_weather_data manual__2023-08-02T09:04:38.919949+00:00 [queued]>
+[2023-08-02 09:04:43,026] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-02 09:04:43,026] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2023-08-02 09:04:43,026] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-02 09:04:43,839] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): load_weather_data> on 2023-08-02 09:04:38.919949+00:00
+[2023-08-02 09:04:43,856] {standard_task_runner.py:52} INFO - Started process 9021 to run task
+[2023-08-02 09:04:43,863] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'S3_to_BigQuery', 'load_weather_data', 'manual__2023-08-02T09:04:38.919949+00:00', '--job-id', '298', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpwp7ekyfe', '--error-file', '/tmp/tmpy014vra_']
+[2023-08-02 09:04:43,865] {standard_task_runner.py:80} INFO - Job 298: Subtask load_weather_data
+[2023-08-02 09:04:44,045] {task_command.py:370} INFO - Running <TaskInstance: S3_to_BigQuery.load_weather_data manual__2023-08-02T09:04:38.919949+00:00 [running]> on host 656341a29da6
+[2023-08-02 09:04:44,239] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=S3_to_BigQuery
+AIRFLOW_CTX_TASK_ID=load_weather_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-08-02T09:04:38.919949+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-08-02T09:04:38.919949+00:00
+[2023-08-02 09:04:44,744] {logging_mixin.py:115} INFO - 
+DataFrame push into xcom.
+[2023-08-02 09:04:44,751] {logging_mixin.py:115} INFO - 
+DATAFRAME SHAPE : (13, 11)
+[2023-08-02 09:04:44,751] {logging_mixin.py:115} INFO - 
+✅ DataFrame created ! ✅
+[2023-08-02 09:04:44,751] {logging_mixin.py:115} INFO - 
+KEY XCOM : weather_topic_json
+[2023-08-02 09:04:44,786] {logging_mixin.py:115} INFO - 
+✅ Push to xcom ! ✅
+[2023-08-02 09:04:48,672] {gbq.py:606} INFO - 13 out of 13 rows loaded.
+[2023-08-02 09:04:48,672] {logging_mixin.py:115} INFO - 
+✅ Table weather_topic/2023-08-01 upload on BigQuery! ✅
+[2023-08-02 09:04:48,673] {python.py:173} INFO - Done. Returned value was: None
+[2023-08-02 09:04:48,701] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=S3_to_BigQuery, task_id=load_weather_data, execution_date=20230802T090438, start_date=20230802T090443, end_date=20230802T090448
+[2023-08-02 09:04:48,772] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-08-02 09:04:48,829] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

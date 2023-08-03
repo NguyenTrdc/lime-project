@@ -1,0 +1,28 @@
+[2023-08-02 05:35:15,118] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: s3_to_BigQuery.stations_data_to_BQ manual__2023-08-02T05:35:11.194695+00:00 [queued]>
+[2023-08-02 05:35:15,126] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: s3_to_BigQuery.stations_data_to_BQ manual__2023-08-02T05:35:11.194695+00:00 [queued]>
+[2023-08-02 05:35:15,126] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-02 05:35:15,126] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2023-08-02 05:35:15,126] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-02 05:35:15,164] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): stations_data_to_BQ> on 2023-08-02 05:35:11.194695+00:00
+[2023-08-02 05:35:15,168] {standard_task_runner.py:52} INFO - Started process 671 to run task
+[2023-08-02 05:35:15,170] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 's3_to_BigQuery', 'stations_data_to_BQ', 'manual__2023-08-02T05:35:11.194695+00:00', '--job-id', '223', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp5fhbvjjj', '--error-file', '/tmp/tmpz9vk9s2e']
+[2023-08-02 05:35:15,171] {standard_task_runner.py:80} INFO - Job 223: Subtask stations_data_to_BQ
+[2023-08-02 05:35:15,231] {task_command.py:370} INFO - Running <TaskInstance: s3_to_BigQuery.stations_data_to_BQ manual__2023-08-02T05:35:11.194695+00:00 [running]> on host e73b972b08ee
+[2023-08-02 05:35:15,483] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=s3_to_BigQuery
+AIRFLOW_CTX_TASK_ID=stations_data_to_BQ
+AIRFLOW_CTX_EXECUTION_DATE=2023-08-02T05:35:11.194695+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-08-02T05:35:11.194695+00:00
+[2023-08-02 05:35:15,485] {logging_mixin.py:115} INFO - 
+ heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeyy
+[2023-08-02 05:35:18,334] {logging_mixin.py:115} INFO - 
+✅ DataFrame created ! ✅
+[2023-08-02 05:35:18,334] {logging_mixin.py:115} INFO - Error: [Errno 21] Is a directory: '/opt/***/plugins/lime-project-key.json'
+[2023-08-02 05:35:18,340] {python.py:173} INFO - Done. Returned value was: None
+[2023-08-02 05:35:18,349] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=s3_to_BigQuery, task_id=stations_data_to_BQ, execution_date=20230802T053511, start_date=20230802T053515, end_date=20230802T053518
+[2023-08-02 05:35:19,846] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-08-02 05:35:20,227] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

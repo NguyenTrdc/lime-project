@@ -1,0 +1,28 @@
+[2023-08-01 23:05:51,606] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: s3_to_BigQuery.weather_data_to_BQ manual__2023-08-01T23:05:46.175001+00:00 [queued]>
+[2023-08-01 23:05:51,624] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: s3_to_BigQuery.weather_data_to_BQ manual__2023-08-01T23:05:46.175001+00:00 [queued]>
+[2023-08-01 23:05:51,624] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-01 23:05:51,624] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2023-08-01 23:05:51,624] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-01 23:05:51,678] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): weather_data_to_BQ> on 2023-08-01 23:05:46.175001+00:00
+[2023-08-01 23:05:51,686] {standard_task_runner.py:52} INFO - Started process 87 to run task
+[2023-08-01 23:05:51,690] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 's3_to_BigQuery', 'weather_data_to_BQ', 'manual__2023-08-01T23:05:46.175001+00:00', '--job-id', '218', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpyd8ovv_g', '--error-file', '/tmp/tmp_bzk3cr8']
+[2023-08-01 23:05:51,691] {standard_task_runner.py:80} INFO - Job 218: Subtask weather_data_to_BQ
+[2023-08-01 23:05:51,974] {task_command.py:370} INFO - Running <TaskInstance: s3_to_BigQuery.weather_data_to_BQ manual__2023-08-01T23:05:46.175001+00:00 [running]> on host e73b972b08ee
+[2023-08-01 23:05:52,081] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=s3_to_BigQuery
+AIRFLOW_CTX_TASK_ID=weather_data_to_BQ
+AIRFLOW_CTX_EXECUTION_DATE=2023-08-01T23:05:46.175001+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-08-01T23:05:46.175001+00:00
+[2023-08-01 23:05:52,082] {logging_mixin.py:115} INFO - 
+ heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeyy
+[2023-08-01 23:05:52,964] {logging_mixin.py:115} INFO - 
+✅ DataFrame created ! ✅
+[2023-08-01 23:05:52,965] {logging_mixin.py:115} INFO - Error: [Errno 2] No such file or directory: '/opt/***/pluginslime-project-key.json'
+[2023-08-01 23:05:52,969] {python.py:173} INFO - Done. Returned value was: None
+[2023-08-01 23:05:53,003] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=s3_to_BigQuery, task_id=weather_data_to_BQ, execution_date=20230801T230546, start_date=20230801T230551, end_date=20230801T230553
+[2023-08-01 23:05:53,106] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-08-01 23:05:53,279] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

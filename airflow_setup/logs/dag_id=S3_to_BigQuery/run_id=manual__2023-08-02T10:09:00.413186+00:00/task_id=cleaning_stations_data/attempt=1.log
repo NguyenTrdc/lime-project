@@ -1,0 +1,37 @@
+[2023-08-02 10:09:09,350] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: S3_to_BigQuery.cleaning_stations_data manual__2023-08-02T10:09:00.413186+00:00 [queued]>
+[2023-08-02 10:09:09,357] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: S3_to_BigQuery.cleaning_stations_data manual__2023-08-02T10:09:00.413186+00:00 [queued]>
+[2023-08-02 10:09:09,358] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-02 10:09:09,358] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2023-08-02 10:09:09,358] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-02 10:09:09,383] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): cleaning_stations_data> on 2023-08-02 10:09:00.413186+00:00
+[2023-08-02 10:09:09,387] {standard_task_runner.py:52} INFO - Started process 117 to run task
+[2023-08-02 10:09:09,390] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'S3_to_BigQuery', 'cleaning_stations_data', 'manual__2023-08-02T10:09:00.413186+00:00', '--job-id', '342', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp96oih6mt', '--error-file', '/tmp/tmppcu7oyqj']
+[2023-08-02 10:09:09,391] {standard_task_runner.py:80} INFO - Job 342: Subtask cleaning_stations_data
+[2023-08-02 10:09:09,457] {task_command.py:370} INFO - Running <TaskInstance: S3_to_BigQuery.cleaning_stations_data manual__2023-08-02T10:09:00.413186+00:00 [running]> on host f57ce474b9bb
+[2023-08-02 10:09:09,594] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=S3_to_BigQuery
+AIRFLOW_CTX_TASK_ID=cleaning_stations_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-08-02T10:09:00.413186+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-08-02T10:09:00.413186+00:00
+[2023-08-02 10:09:09,712] {logging_mixin.py:115} INFO - 
+DataFrame push into xcom.
+[2023-08-02 10:09:10,976] {logging_mixin.py:115} INFO - 
+DATAFRAME SHAPE : (16003, 8)
+[2023-08-02 10:09:10,977] {logging_mixin.py:115} INFO - 
+✅ DataFrame created ! ✅
+[2023-08-02 10:09:11,406] {logging_mixin.py:115} INFO -    stationCode       datetime  ...        lat    time_period
+0        16107  1690900970338  ...  48.865983  1690900200000
+1        31104  1690900970338  ...  48.871257  1690900200000
+2         9020  1690900970338  ...  48.879296  1690900200000
+3        12109  1690900970338  ...  48.840855  1690900200000
+4        14111  1690900970338  ...  48.837526  1690900200000
+
+[5 rows x 8 columns]
+[2023-08-02 10:09:11,415] {python.py:173} INFO - Done. Returned value was: None
+[2023-08-02 10:09:11,436] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=S3_to_BigQuery, task_id=cleaning_stations_data, execution_date=20230802T100900, start_date=20230802T100909, end_date=20230802T100911
+[2023-08-02 10:09:11,575] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-08-02 10:09:11,641] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
